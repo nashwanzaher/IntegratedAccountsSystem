@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34004.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegratedAccSys", "IntegratedAccSys.csproj", "{AB5433E6-9E40-4FD1-B051-712B3C56ECBF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IASSetup", "..\IASSetup\IASSetup.vdproj", "{4116E2D3-2AA0-A63A-6419-2E1939D019D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB5433E6-9E40-4FD1-B051-712B3C56ECBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5433E6-9E40-4FD1-B051-712B3C56ECBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5433E6-9E40-4FD1-B051-712B3C56ECBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5433E6-9E40-4FD1-B051-712B3C56ECBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4116E2D3-2AA0-A63A-6419-2E1939D019D1}.Debug|Any CPU.ActiveCfg = Debug
+		{4116E2D3-2AA0-A63A-6419-2E1939D019D1}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45E54689-B617-40B1-9C5E-1E23F734667D}
+	EndGlobalSection
+EndGlobal
