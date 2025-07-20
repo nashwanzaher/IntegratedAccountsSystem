@@ -42,3 +42,24 @@ A complete accounting system developed using C# and SQL Server, covering account
 
 ```csharp
 Data Source=.\SQLEXPRESS;Initial Catalog=IntegratedAccSys;Integrated Security=True;
+
+حل أخر
+نفذ الكود التالي  في SQL SERVER
+USE master;
+GO
+
+-- إذا كانت القاعدة موجودة مسبقاً، فصلها وحذفها
+IF DB_ID('accountSysDB') IS NOT NULL
+BEGIN
+    ALTER DATABASE accountSysDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE accountSysDB;
+END
+GO
+
+RESTORE DATABASE accountSysDB
+FROM DISK = N'D:\IntegratedAccSys.bak'
+WITH 
+    MOVE 'accountSysDB' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\accountSysDB.mdf',
+    MOVE 'accountSysDB_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\accountSysDB_log.ldf',
+    REPLACE,
+    STATS = 5;
