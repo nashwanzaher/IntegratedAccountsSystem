@@ -59,7 +59,7 @@ GO
 RESTORE DATABASE accountSysDB
 FROM DISK = N'D:\IntegratedAccSys.bak'
 WITH 
-    MOVE 'accountSysDB' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\accountSysDB.mdf',
-    MOVE 'accountSysDB_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\accountSysDB_log.ldf',
+    MOVE 'accountSysDB' TO N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\accountSysDB.mdf',
+    MOVE 'accountSysDB_log' TO N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\accountSysDB_log.ldf',
     REPLACE,
     STATS = 5;
