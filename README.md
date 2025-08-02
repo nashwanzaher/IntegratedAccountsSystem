@@ -42,7 +42,7 @@ A comprehensive accounting system supporting accounts, inventory, purchases, sal
 - Visual Studio 2022 or later  
 - SQL Server 2019 (Express or Full)  
 - Windows OS  
-- Modern web browser (for reports or web UI if applicable)  
+
 
 ---
 
