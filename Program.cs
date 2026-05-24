@@ -4,7 +4,7 @@ namespace IntegratedAccSys
 {
     internal static class Program
     {
-        public static string userName;
+        public static string userName = null!;
         public static int braCode;
         /// <summary>
         ///  The main entry point for the application.
@@ -26,7 +26,7 @@ namespace IntegratedAccSys
             string server = Properties.Settings.Default.Server;
             string id = Properties.Settings.Default.ID;
             string pwd = Properties.Settings.Default.PWD;
-            // ÝÇÑÛÉ ÛíÑ ÇáÞíã ßá Ãä ÇáÊÃßÏ
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (string.IsNullOrWhiteSpace(mode) ||
                 string.IsNullOrWhiteSpace(db) ||
                 string.IsNullOrWhiteSpace(server) ||
@@ -36,7 +36,7 @@ namespace IntegratedAccSys
                 return false;
             }
 
-            // ÊÍÞÞ ãä ÇáÇÊÕÇá ÇáÝÚáí
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             string connectionString = $"Server={server};Database={db};User ID={id};Password={pwd};";
 
             try
@@ -44,12 +44,12 @@ namespace IntegratedAccSys
                 using (var conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    return true; // ÇáÇÊÕÇá äÇÌÍ
+                    return true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 }
             }
             catch
             {
-                return false; // ÝÔá ÇáÇÊÕÇá
+                return false; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             }
         }
     }

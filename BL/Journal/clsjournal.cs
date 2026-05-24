@@ -57,7 +57,7 @@ namespace IntegratedAccSys.BL.Journal
 
         }
 
-        public void addJournalBody(int  accCode,int  currID,double currVal,double  accDebitor,double  accCreditor, string entityNote, int  jNo)
+        public void addJournalBody(int  accCode,int  currID,double currVal,double  accDebitor,double  accCreditor, string? entityNote, int  jNo)
         {
             DAL.clsCN cn=new DAL.clsCN();
             SqlParameter[] para = new SqlParameter[7];

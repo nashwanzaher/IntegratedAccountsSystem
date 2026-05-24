@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IntegratedAccSys.BL.Security;
 
 namespace IntegratedAccSys
 {
@@ -14,11 +15,11 @@ namespace IntegratedAccSys
     public partial class frmMainWindow : Form
     {
         BL.Users.clsUsers cu = new BL.Users.clsUsers();
-        public Button btnNew;
-        public Button btnAdd;
-        public Button btnEdit;
-        public Button btnDel;
-        public Button btnPrint;
+        public Button btnNew = null!;
+        public Button btnAdd = null!;
+        public Button btnEdit = null!;
+        public Button btnDel = null!;
+        public Button btnPrint = null!;
 
         public frmMainWindow()
         {
@@ -79,7 +80,7 @@ namespace IntegratedAccSys
                 };
 
 
-                for (int i = 0; i < dt.Rows.Count; i++)
+                for (int i = 0; i < Math.Min(dt.Rows.Count, screens.Length); i++)
                 {
                     bool isEnabled = dt.Rows[i][1] != DBNull.Value && Convert.ToInt32(dt.Rows[i][1]) == 1;
 
@@ -102,11 +103,34 @@ namespace IntegratedAccSys
 
         private void Exit_Click(object sender, EventArgs e)
         {
+            // Phase 7: End the session on logout
+            SessionContext.End();
             this.Close();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            // Phase 7: End session on any form close (logout button, X button, Alt+F4)
+            // Only end if the session is still active (not already ended by Exit_Click)
+            if (SessionContext.IsActive)
+            {
+                SessionContext.End();
+            }
         }
 
         private void frmMainWindow_Load(object sender, EventArgs e)
         {
+            // Phase 7: Validate session — block access if session is invalid or expired
+            if (!SessionContext.Validate())
+            {
+                MessageBox.Show("انتهت صلاحية الجلسة. يرجى تسجيل الدخول مرة أخرى.", "انتهاء الجلسة", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                SessionContext.End();
+                Application.Restart();
+                return;
+            }
+
             lblCurrentUser.Text = Program.userName;
             lblInsertDate.Text = DateTime.Now.ToString();
             lblCurrBranch.Text = Program.braCode.ToString();

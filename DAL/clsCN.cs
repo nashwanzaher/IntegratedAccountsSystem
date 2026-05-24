@@ -5,10 +5,10 @@ namespace IntegratedAccSys.DAL
 {
     internal class clsCN
     {
-        SqlConnection conn;
-        SqlCommand cmd;
-        SqlDataAdapter sda;
-        DataTable dt;
+        SqlConnection conn = null!;
+        SqlCommand cmd = null!;
+        SqlDataAdapter sda = null!;
+        DataTable dt = null!;
 
         public clsCN()
         {
@@ -42,7 +42,7 @@ namespace IntegratedAccSys.DAL
 
         //method to read data from database using stored procedure
 
-        public DataTable SelectData(string sp, SqlParameter[] para)
+        public DataTable SelectData(string sp, SqlParameter[]? para)
         {
             cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -67,7 +67,7 @@ namespace IntegratedAccSys.DAL
 
         //method to insert ,update or Delete data from database using stored procedure
 
-        public void ExecuteCmd(string sp, SqlParameter[] para)
+        public void ExecuteCmd(string sp, SqlParameter[]? para)
         {
             cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;

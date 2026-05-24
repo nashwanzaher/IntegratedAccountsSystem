@@ -16,7 +16,7 @@ namespace IntegratedAccSys.PL.Users
     public partial class frmUsers : Form
     {
         BL.Users.clsUsers cu = new BL.Users.clsUsers();
-        byte[] uImg;
+        byte[]? uImg;
         public frmUsers()
         {
             InitializeComponent();

@@ -130,7 +130,9 @@ namespace IntegratedAccSys.PL.Users
         {
            try
             {
-                int userCode = Convert.ToInt32(lbUsers.SelectedValue);
+                int targetUserCode = Convert.ToInt32(lbUsers.SelectedValue);
+                int currentUserCode = Convert.ToInt32(cu.getUserNo(Program.userName).Rows[0][0]);
+
                 for (int i = 0; i < dgvData.Rows.Count; i++)
                 {
                     int windowID = Convert.ToInt32(dgvData.Rows[i].Cells[0].Value);
@@ -141,9 +143,14 @@ namespace IntegratedAccSys.PL.Users
                     bool print = dgvData.Rows[i].Cells[7].Value != DBNull.Value && Convert.ToBoolean(dgvData.Rows[i].Cells[7].Value);
                     bool display = dgvData.Rows[i].Cells[8].Value != DBNull.Value && Convert.ToBoolean(dgvData.Rows[i].Cells[8].Value);
 
-                    cu.editPrivilege(userCode, windowID, new_, add, edit, del, print, display, Program.braCode);
-                   
+                    cu.editPrivilege(targetUserCode, windowID, new_, add, edit, del, print, display, Program.braCode);
+
+                    // Log privilege change for this window
+                    string targetUserID = cu.getUserNo(targetUserCode.ToString()).Rows[0]["userID"].ToString();
+                    IntegratedAccSys.BL.Security.AuditHelper.LogPrivilegeUpdated(
+                        currentUserCode, targetUserID, Program.braCode, windowID);
                 }
+
                 MessageBox.Show("تمت عملية حفظ الصلاحيات بنجاح", "حفظ الصلاحيات", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

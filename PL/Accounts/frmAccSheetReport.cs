@@ -1,4 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using IntegratedAccSys.BL.Security;
 
 namespace IntegratedAccSys.PL.Accounts
 {
@@ -17,11 +18,14 @@ namespace IntegratedAccSys.PL.Accounts
     {
         BL.SysFormat.clsSysFormat csf = new BL.SysFormat.clsSysFormat();
         BL.Accounts.clsAccounts ca = new BL.Accounts.clsAccounts();
+
+        // Phase 6: windowID for Account Sheet Report
+        private const int WINDOW_ID = 31;
+
         public frmAccSheetReport()
         {
             InitializeComponent();
             dgvProperties();
-
         }
 
         void dgvProperties()
@@ -42,6 +46,7 @@ namespace IntegratedAccSys.PL.Accounts
             dgvData.DefaultCellStyle.Font = new Font("Times New Roman", 10.75F, FontStyle.Bold);
             dgvData.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -49,6 +54,14 @@ namespace IntegratedAccSys.PL.Accounts
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            // Phase 6: Block if no print privilege
+            if (!PrivilegeHelper.HasPrintPrivilege(WINDOW_ID))
+            {
+                AuditHelper.LogBlockedReportAccess(WINDOW_ID, "frmAccSheetReport");
+                MessageBox.Show("ليس لديك صلاحية طباعة هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
             DateTime fromDate = dtpFromDate.Value.Date;
             DateTime toDate = dtpToDate.Value.Date;
             decimal exchangeRate = Convert.ToDecimal(txtCurrVal.Text);
@@ -67,6 +80,14 @@ namespace IntegratedAccSys.PL.Accounts
 
         private void frmAccSheetReport_Load(object sender, EventArgs e)
         {
+            // Phase 6: Block form open if no display privilege
+            if (!PrivilegeHelper.HasDisplayPrivilege(WINDOW_ID))
+            {
+                MessageBox.Show("ليس لديك صلاحية عرض هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                this.BeginInvoke(new Action(Close));
+                return;
+            }
+
             dgvData.Columns[0].HeaderText = "التاريخ";
             dgvData.Columns[1].HeaderText = "رقم الحساب";
             dgvData.Columns[2].HeaderText = "إسم الحساب";

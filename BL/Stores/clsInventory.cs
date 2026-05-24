@@ -473,19 +473,24 @@ namespace IntegratedAccSys.BL.Stores
         #endregion
 
         #region Inventory
-        public DataTable getProductsInventory()
+        public DataTable getProductsInventory(int braCode)
         {
             DAL.clsCN cn=new DAL.clsCN();
-            return cn.SelectData("getProductsInventory", null);
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@braCode", braCode)
+            };
+            return cn.SelectData("getProductsInventory", para);
         }
 
-        public DataTable getInventoryMovement(DateTime fromDate,DateTime toDate)
+        public DataTable getInventoryMovement(DateTime fromDate,DateTime toDate, int braCode)
         {
             DAL.clsCN cn = new DAL.clsCN();
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter ("@fromDate",fromDate),
-                new SqlParameter ("@toDate",toDate)
+                new SqlParameter ("@toDate",toDate),
+                new SqlParameter ("@braCode",braCode)
             };
             return cn.SelectData("getInventoryMovement",para);
         }

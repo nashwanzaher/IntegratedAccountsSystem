@@ -1,4 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using IntegratedAccSys.BL.Security;
 
 namespace IntegratedAccSys.PL.Accounts
 {
@@ -17,6 +18,13 @@ namespace IntegratedAccSys.PL.Accounts
     {
         BL.SysFormat.clsSysFormat csf = new BL.SysFormat.clsSysFormat();
         BL.Accounts.clsAccounts ca = new BL.Accounts.clsAccounts();
+
+        // Phase 6: windowIDs for Final Accounts Report
+        // windowID 35 = Financial Accounts List (قائمة الأرباح والخسائر)
+        // windowID 36 = Balance Sheet (الميزانية العمومية)
+        private const int WINDOW_ID_PROFIT_LOSS = 35;
+        private const int WINDOW_ID_BALANCE_SHEET = 36;
+
         public frmFinalAccounts()
         {
             InitializeComponent();
@@ -43,13 +51,27 @@ namespace IntegratedAccSys.PL.Accounts
             dgvData.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
-
         void getAllCurencies()
         {
             cbCurrencies.DataSource = csf.getAllCurrencies();
             cbCurrencies.DisplayMember = "currName";
             cbCurrencies.ValueMember = "ID";
         }
+
+        private void frmFinalAccounts_Load(object sender, EventArgs e)
+        {
+            // Phase 6: Block form open if no display privilege on either report type
+            bool hasProfitLoss = PrivilegeHelper.HasDisplayPrivilege(WINDOW_ID_PROFIT_LOSS);
+            bool hasBalanceSheet = PrivilegeHelper.HasDisplayPrivilege(WINDOW_ID_BALANCE_SHEET);
+
+            if (!hasProfitLoss && !hasBalanceSheet)
+            {
+                MessageBox.Show("ليس لديك صلاحية عرض هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                this.BeginInvoke(new Action(Close));
+                return;
+            }
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -80,7 +102,6 @@ namespace IntegratedAccSys.PL.Accounts
             dgvData.Columns[2].HeaderText = "مدين";
             dgvData.Columns[3].HeaderText = "دائن";
             dgvData.Columns[4].HeaderText = "الرصيد";
-
         }
 
         private void cbCurrencies_SelectedIndexChanged(object sender, EventArgs e)
@@ -96,16 +117,25 @@ namespace IntegratedAccSys.PL.Accounts
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-           
-            DateTime fromDate =dtpFromDate.Value.Date;
+            // Phase 6: Block if no print privilege on the current report type
+            int reportType = Convert.ToInt32(txtReportType.Text);
+            int windowID = (reportType == 2) ? WINDOW_ID_PROFIT_LOSS : WINDOW_ID_BALANCE_SHEET;
+
+            if (!PrivilegeHelper.HasPrintPrivilege(windowID))
+            {
+                AuditHelper.LogBlockedReportAccess(windowID, "frmFinalAccounts");
+                MessageBox.Show("ليس لديك صلاحية طباعة هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            DateTime fromDate = dtpFromDate.Value.Date;
             DateTime toDate = dtpToDate.Value.Date;
             decimal exchangeRate = Convert.ToDecimal(txtCurrVal.Text);
-            int reportType = Convert.ToInt32(txtReportType.Text);
             int braCode = Program.braCode;
             List<ReportDataSource> dataSource = new List<ReportDataSource>
             {
-                new ReportDataSource("dsBranchData",csf.getBranchData(Program.braCode)),
-                new ReportDataSource("dsFinalAccount",ca.getFinalAccountReport(fromDate, toDate, exchangeRate, braCode, reportType))
+                new ReportDataSource("dsBranchData", csf.getBranchData(Program.braCode)),
+                new ReportDataSource("dsFinalAccount", ca.getFinalAccountReport(fromDate, toDate, exchangeRate, braCode, reportType))
             };
             string reportTitle = reportType switch
             {
@@ -114,8 +144,7 @@ namespace IntegratedAccSys.PL.Accounts
                 _ => "تقرير مالي"
             };
 
-
-            IntegratedAccSys.Reports.frmReportViewer frv=new IntegratedAccSys.Reports.frmReportViewer("rptFinalAccounts.rdlc", dataSource, reportTitle);
+            IntegratedAccSys.Reports.frmReportViewer frv = new IntegratedAccSys.Reports.frmReportViewer("rptFinalAccounts.rdlc", dataSource, reportTitle);
             frv.ShowDialog();
         }
     }

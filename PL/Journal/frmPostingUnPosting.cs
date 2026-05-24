@@ -17,7 +17,7 @@ namespace IntegratedAccSys.PL.Journal
         BL.Journal.clsjournal cj = new BL.Journal.clsjournal();
         BL.Users.clsUsers cu = new BL.Users.clsUsers();
 
-        DataTable dt;
+        DataTable? dt;
         public string userName = Program.userName;
         public Boolean IsHeaderCheckBoxClicked = true;
 

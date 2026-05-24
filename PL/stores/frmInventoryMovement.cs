@@ -1,4 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,17 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IntegratedAccSys.BL.Security;
 
 namespace IntegratedAccSys.PL.stores
 {
     public partial class frmInventoryMovement : Form
     {
         BL.Stores.clsInventory ci = new BL.Stores.clsInventory();
-        BL.SysFormat.clsSysFormat csf=new BL.SysFormat.clsSysFormat();
+        BL.SysFormat.clsSysFormat csf = new BL.SysFormat.clsSysFormat();
+
+        // Phase 6: windowID for Inventory Movement Report
+        private const int WINDOW_ID = 30;
+
         public frmInventoryMovement()
         {
             InitializeComponent();
         }
+
         void dgvProperties()
         {
             // تنسيق رؤوس الأعمدة
@@ -37,21 +43,30 @@ namespace IntegratedAccSys.PL.stores
             dgvData.DefaultCellStyle.Font = new Font("Times New Roman", 10.75F, FontStyle.Bold);
             dgvData.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void frmInventoryMovement_Load(object sender, EventArgs e)
         {
+            // Phase 6: Block form open if no display privilege
+            if (!PrivilegeHelper.HasDisplayPrivilege(WINDOW_ID))
+            {
+                MessageBox.Show("ليس لديك صلاحية عرض هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                this.BeginInvoke(new Action(Close));
+                return;
+            }
+
             dgvProperties();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            dt = ci.getInventoryMovement(Convert.ToDateTime(dtpFromDate.Value), Convert.ToDateTime(dtpToDate.Value));
+            dt = ci.getInventoryMovement(Convert.ToDateTime(dtpFromDate.Value), Convert.ToDateTime(dtpToDate.Value), Program.braCode);
             if (dt.Rows.Count > 0)
             {
                 dgvData.DataSource = dt;
@@ -70,7 +85,7 @@ namespace IntegratedAccSys.PL.stores
                 dgvData.Columns[12].HeaderText = "رقم السند/الفاتورة";
                 dgvData.Columns[13].Visible = false;
                 dgvData.Columns[14].Visible = false;
-                dgvData.Columns[15].HeaderText="العملية";
+                dgvData.Columns[15].HeaderText = "العملية";
             }
             else
             {
@@ -80,14 +95,22 @@ namespace IntegratedAccSys.PL.stores
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            // Phase 6: Block if no print privilege
+            if (!PrivilegeHelper.HasPrintPrivilege(WINDOW_ID))
+            {
+                AuditHelper.LogBlockedReportAccess(WINDOW_ID, "frmInventoryMovement");
+                MessageBox.Show("ليس لديك صلاحية طباعة هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
             List<ReportDataSource> dataSource = new List<ReportDataSource>
             {
-                new ReportDataSource("dsBranchData",csf.getBranchData(Program.braCode)),
-                new ReportDataSource("dsInventoryMovement",ci.getInventoryMovement(Convert.ToDateTime(dtpFromDate.Value), Convert.ToDateTime(dtpToDate.Value))),
+                new ReportDataSource("dsBranchData", csf.getBranchData(Program.braCode)),
+                new ReportDataSource("dsInventoryMovement", ci.getInventoryMovement(Convert.ToDateTime(dtpFromDate.Value), Convert.ToDateTime(dtpToDate.Value), Program.braCode)),
             };
             string reportTitle = "حركة المخزون";
             IntegratedAccSys.Reports.frmReportViewer frv = new IntegratedAccSys.Reports.frmReportViewer("rptInventoryMovement.rdlc", dataSource, reportTitle);
-            frv.ShowDialog();   
+            frv.ShowDialog();
         }
     }
 }

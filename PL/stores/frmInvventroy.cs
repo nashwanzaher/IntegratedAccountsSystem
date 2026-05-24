@@ -1,4 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IntegratedAccSys.BL.Security;
 
 namespace IntegratedAccSys.PL.stores
 {
@@ -15,10 +16,15 @@ namespace IntegratedAccSys.PL.stores
     {
         BL.Stores.clsInventory ci = new BL.Stores.clsInventory();
         BL.SysFormat.clsSysFormat csf = new BL.SysFormat.clsSysFormat();
+
+        // Phase 6: windowID for Products Inventory Report
+        private const int WINDOW_ID = 29;
+
         public frmInvventroy()
         {
             InitializeComponent();
         }
+
         void dgvProperties()
         {
             // تنسيق رؤوس الأعمدة
@@ -40,6 +46,14 @@ namespace IntegratedAccSys.PL.stores
 
         private void frmInvventroy_Load(object sender, EventArgs e)
         {
+            // Phase 6: Block form open if no display privilege
+            if (!PrivilegeHelper.HasDisplayPrivilege(WINDOW_ID))
+            {
+                MessageBox.Show("ليس لديك صلاحية عرض هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                this.BeginInvoke(new Action(Close));
+                return;
+            }
+
             dgvProperties();
         }
 
@@ -52,7 +66,7 @@ namespace IntegratedAccSys.PL.stores
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            dt = ci.getProductsInventory();
+            dt = ci.getProductsInventory(Program.braCode);
             if (dt.Rows.Count > 0)
             {
                 dgvData.DataSource = dt;
@@ -74,10 +88,18 @@ namespace IntegratedAccSys.PL.stores
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            // Phase 6: Block if no print privilege
+            if (!PrivilegeHelper.HasPrintPrivilege(WINDOW_ID))
+            {
+                AuditHelper.LogBlockedReportAccess(WINDOW_ID, "frmInvventroy");
+                MessageBox.Show("ليس لديك صلاحية طباعة هذا التقرير.", "تعديل", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
             List<ReportDataSource> dataSource = new List<ReportDataSource>
             {
-                new ReportDataSource("dsBranchData",csf.getBranchData(Program.braCode)),
-                new ReportDataSource("dsProductsInventory",ci.getProductsInventory())
+                new ReportDataSource("dsBranchData", csf.getBranchData(Program.braCode)),
+                new ReportDataSource("dsProductsInventory", ci.getProductsInventory(Program.braCode))
             };
             string reportTitle = "جرد المخزون";
             IntegratedAccSys.Reports.frmReportViewer frv = new IntegratedAccSys.Reports.frmReportViewer("rptProductsInventory.rdlc", dataSource, reportTitle);

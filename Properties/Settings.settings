@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="Mode" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Windows Authentication</Value>
     </Setting>
     <Setting Name="DB" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">accountSysDB</Value>
     </Setting>
     <Setting Name="Server" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">MRGFG-32\SQLEXPRESS</Value>
     </Setting>
     <Setting Name="ID" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

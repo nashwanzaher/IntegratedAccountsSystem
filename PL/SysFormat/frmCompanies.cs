@@ -13,7 +13,7 @@ namespace IntegratedAccSys.PL.SysFormat
     public partial class frmCompanies : Form
     {
         BL.SysFormat.clsSysFormat csf = new BL.SysFormat.clsSysFormat();
-        byte[] cImg;
+        byte[]? cImg;
         public frmCompanies()
         {
             InitializeComponent();
