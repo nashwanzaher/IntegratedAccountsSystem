@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IntegratedAccSys.BL.Security;
+using IntegratedAccSys.BL;
 
 namespace IntegratedAccSys
 {
@@ -85,9 +86,6 @@ namespace IntegratedAccSys
                     bool isEnabled = dt.Rows[i][1] != DBNull.Value && Convert.ToInt32(dt.Rows[i][1]) == 1;
 
                     screens[i].Enabled = isEnabled;
-
-                    if (!isEnabled)
-                        MessageBox.Show($"العنصر المعطّل: {screens[i].Name}");
 
                 }
 
@@ -183,7 +181,7 @@ namespace IntegratedAccSys
         {
             PL.Bonds.frmBonds fb = new PL.Bonds.frmBonds();
             fb.Text = "سند صرف";
-            fb.txtBType.Text = "2";
+            fb.txtBType.Text = Constants.BondTypePay.ToString();
             fb.ShowDialog();
         }
 
@@ -191,7 +189,7 @@ namespace IntegratedAccSys
         {
             PL.Bonds.frmBonds fb = new PL.Bonds.frmBonds();
             fb.Text = "سند قبض";
-            fb.txtBType.Text = "3";
+            fb.txtBType.Text = Constants.BondTypeReceive.ToString();
             fb.ShowDialog();
         }
 
@@ -211,7 +209,7 @@ namespace IntegratedAccSys
         {
             PL.Accounts.frmFinalAccounts ffa = new PL.Accounts.frmFinalAccounts();
             ffa.Text = "قائمة الميزانية العمومية";
-            ffa.txtReportType.Text = "1";
+            ffa.txtReportType.Text = Constants.ReportTypeBalanceSheet.ToString();
             ffa.ShowDialog();
 
         }
@@ -220,7 +218,7 @@ namespace IntegratedAccSys
         {
             PL.Accounts.frmFinalAccounts ffa = new PL.Accounts.frmFinalAccounts();
             ffa.Text = "قائمة الأرباح و الخسائر";
-            ffa.txtReportType.Text = "2";
+            ffa.txtReportType.Text = Constants.ReportTypeProfitAndLoss.ToString();
             ffa.ShowDialog();
 
         }
@@ -230,7 +228,7 @@ namespace IntegratedAccSys
             PL.SysFormat.frmBackUps fbu = new PL.SysFormat.frmBackUps();
             fbu.btnBackUp.Visible = true;
             fbu.btnRestoreDB.Visible = false;
-            fbu.txtBackType.Text = "1";
+            fbu.txtBackType.Text = Constants.BackupTypeCreate.ToString();
             fbu.Text = "عمل نسخة إحتياطية";
             fbu.ShowDialog();
 
@@ -241,7 +239,7 @@ namespace IntegratedAccSys
             PL.SysFormat.frmBackUps fbu = new PL.SysFormat.frmBackUps();
             fbu.btnBackUp.Visible = false;
             fbu.btnRestoreDB.Visible = true;
-            fbu.txtBackType.Text = "2";
+            fbu.txtBackType.Text = Constants.BackupTypeRestore.ToString();
             fbu.Text = "إسترجاع النسخة الإحتياطية";
             fbu.ShowDialog();
         }
@@ -279,14 +277,14 @@ namespace IntegratedAccSys
         private void PurchasesInvoice_Click(object sender, EventArgs e)
         {
             PL.Purchases.frmPurchasesBill fpb = new PL.Purchases.frmPurchasesBill();
-            fpb.txtOpType.Text = "5";
+            fpb.txtOpType.Text = Constants.OpTypePurchase.ToString();
             fpb.ShowDialog();
         }
 
         private void SalessInvoice_Click(object sender, EventArgs e)
         {
             PL.Sales.frmSalesBill fsb = new PL.Sales.frmSalesBill();
-            fsb.txtOpType.Text = "4";
+            fsb.txtOpType.Text = Constants.OpTypeSale.ToString();
             fsb.ShowDialog();
         }
 
@@ -299,7 +297,7 @@ namespace IntegratedAccSys
         private void ptnImport_Click(object sender, EventArgs e)
         {
             PL.Purchases.frmPurchasesBill fpb = new PL.Purchases.frmPurchasesBill();
-            fpb.txtOpType.Text = "6";
+            fpb.txtOpType.Text = Constants.OpTypeStoreImport.ToString();
             fpb.Text = "سند توريد مخزني";
             fpb.ShowDialog();
         }
@@ -307,7 +305,7 @@ namespace IntegratedAccSys
         private void ptnExport_Click(object sender, EventArgs e)
         {
             PL.Sales.frmSalesBill fsb = new PL.Sales.frmSalesBill();
-            fsb.txtOpType.Text = "7";
+            fsb.txtOpType.Text = Constants.OpTypeStoreExport.ToString();
             fsb.Text = "سند صرف مخزني";
             fsb.ShowDialog();
         }
@@ -340,7 +338,7 @@ namespace IntegratedAccSys
         {
             PL.Journal.frmPostingUnPosting fjp = new PL.Journal.frmPostingUnPosting();
             fjp.Text = "ترحيل الحسابات";
-            fjp.txtPostStatus.Text = "1";
+            fjp.txtPostStatus.Text = Constants.PostingStatusPost.ToString();
             fjp.btnPosing.Visible = true;
             fjp.ShowDialog();
         }
@@ -349,7 +347,7 @@ namespace IntegratedAccSys
         {
             PL.Journal.frmPostingUnPosting fjp = new PL.Journal.frmPostingUnPosting();
             fjp.Text = "إلغاء ترحيل الحسابات";
-            fjp.txtPostStatus.Text = "2";
+            fjp.txtPostStatus.Text = Constants.PostingStatusUnpost.ToString();
             fjp.btnPosing.Visible = true;
             fjp.ShowDialog();
         }

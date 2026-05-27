@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace IntegratedAccSys.BL.Stores
 {

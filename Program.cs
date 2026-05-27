@@ -19,6 +19,10 @@ namespace IntegratedAccSys
 
         }
 
+        /// <summary>
+        /// التحقق من وجود إعدادات الاتصال بقاعدة البيانات.
+        /// Returns true if all connection settings are configured.
+        /// </summary>
         static bool CheckIfConnectionSettingsExist()
         {
             string mode = Properties.Settings.Default.Mode;
@@ -26,7 +30,8 @@ namespace IntegratedAccSys
             string server = Properties.Settings.Default.Server;
             string id = Properties.Settings.Default.ID;
             string pwd = Properties.Settings.Default.PWD;
-            // ����� ��� ����� �� �� ������
+
+            // التحقق من اكتمال جميع الإعدادات
             if (string.IsNullOrWhiteSpace(mode) ||
                 string.IsNullOrWhiteSpace(db) ||
                 string.IsNullOrWhiteSpace(server) ||
@@ -36,7 +41,7 @@ namespace IntegratedAccSys
                 return false;
             }
 
-            // ���� �� ������� ������
+            // بناء سلسلة الاتصال
             string connectionString = $"Server={server};Database={db};User ID={id};Password={pwd};";
 
             try
@@ -44,12 +49,12 @@ namespace IntegratedAccSys
                 using (var conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    return true; // ������� ����
+                    return true; // تم الاتصال بنجاح
                 }
             }
             catch
             {
-                return false; // ��� �������
+                return false; // فشل الاتصال
             }
         }
     }
