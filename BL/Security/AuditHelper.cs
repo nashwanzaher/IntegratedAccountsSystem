@@ -23,6 +23,7 @@ namespace IntegratedAccSys.BL.Security
         public const string EventSessionEnded    = "SESSION_ENDED";
         public const string EventSessionExpired  = "SESSION_EXPIRED";
         public const string EventSessionInvalid = "SESSION_INVALID";
+        public const string EventSecurityWarning = "SECURITY_WARNING";
 
         // ─── Static machine name (captured once at startup) ─────────────────
         private static readonly string MachineName = Environment.MachineName;
@@ -183,6 +184,20 @@ namespace IntegratedAccSys.BL.Security
                 errorMessage: "Invalid or tampered session token",
                 userCode: userCode, userID: userID, braCode: braCode,
                 moduleName: "SessionContext");
+        }
+
+        /// <summary>
+        /// ⚠️ SECURITY: Logs security warnings for plaintext password detection.
+        /// This helps identify legacy accounts that need migration.
+        /// </summary>
+        public static void LogSecurityWarning(int userCode, string userID, string warningMessage)
+        {
+            Log(EventSecurityWarning, "SecurityWarning", "Security", userID,
+                newValue: warningMessage,
+                success: false,
+                errorMessage: warningMessage,
+                userCode: userCode, userID: userID,
+                moduleName: "SecurityMonitor");
         }
     }
 }

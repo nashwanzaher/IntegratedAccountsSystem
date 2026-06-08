@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -82,6 +82,7 @@ namespace IntegratedAccSys.BL.Users
             }
 
             // ─── TIER 3: Plaintext fallback (original — pre-migration) ─────────────
+            // ⚠️ SECURITY WARNING: Plaintext password detected - indicates legacy user
             else if (user["PWD"] != DBNull.Value)
             {
                 string storedPWD = Convert.ToString(user["PWD"]);
@@ -89,6 +90,14 @@ namespace IntegratedAccSys.BL.Users
                 {
                     authenticated = true;
                     needsUpgrade = true; // Upgrade to PBKDF2 after successful login
+                    
+                    // ⚠️ SECURITY: Log plaintext authentication detection
+                    // This indicates a legacy account that should be migrated
+                    AuditHelper.LogSecurityWarning(
+                        userCode, 
+                        userID, 
+                        "Plaintext password authentication - user requires password migration"
+                    );
                 }
             }
 
@@ -344,6 +353,7 @@ namespace IntegratedAccSys.BL.Users
         public DataTable getAllBraUsers(int braCode)
         {
 
+
             DAL.clsCN cn = new DAL.clsCN();
             SqlParameter[] para = new SqlParameter[]
             {
@@ -356,12 +366,15 @@ namespace IntegratedAccSys.BL.Users
         // Get all  lists
         public DataTable getAllLists()
         {
+
             DAL.clsCN cn = new DAL.clsCN();
             return cn.SelectData("getAllLists", null);
         }
 
         public DataTable getAllPrivillages(int userCode, int braCode, int listID)
         {
+
+
             DAL.clsCN cn = new DAL.clsCN();
             SqlParameter[] para = new SqlParameter[]
             {
@@ -375,6 +388,8 @@ namespace IntegratedAccSys.BL.Users
         // Edit privileges
         public void editPrivilege(int userCode, int WindowsID, bool privNew, bool privAdd, bool privEdit, bool privDel,bool privPrint, bool privDisplay, int braCode)
         {
+
+
             DAL.clsCN cn = new DAL.clsCN();
             SqlParameter[] para = new SqlParameter[]
             {      
@@ -395,6 +410,8 @@ namespace IntegratedAccSys.BL.Users
         // get Screens Display privileges
         public DataTable getDisplayPrivillages(int userCode, int braCode)
         {
+
+
             DAL.clsCN cn = new DAL.clsCN();
             SqlParameter[] para = new SqlParameter[]
             {
@@ -407,6 +424,8 @@ namespace IntegratedAccSys.BL.Users
         // get Screens privileges
         public DataTable getScreensPrivillages(int userCode, int WindowsID,int braCode)
         {
+
+
             DAL.clsCN cn = new DAL.clsCN();
             SqlParameter[] para = new SqlParameter[]
             {
@@ -466,6 +485,7 @@ namespace IntegratedAccSys.BL.Users
                     controls[0].Enabled = enabled;
             }
         }
+
 
 
         #endregion

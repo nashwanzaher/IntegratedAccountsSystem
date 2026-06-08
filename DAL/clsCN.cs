@@ -1,11 +1,12 @@
 using System.Data.SqlClient;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace IntegratedAccSys.DAL
 {
     /// <summary>
     /// Data access wrapper. IDisposable ensures SqlConnection, SqlCommand,
-    /// and SqlDataAdapter are always disposed. callers should wrap usage in
+    /// and SqlDataAdapter are always disposed. Callers should wrap usage in
     /// a using block or call Dispose() explicitly.
     /// </summary>
     internal sealed class clsCN : IDisposable
@@ -34,9 +35,6 @@ namespace IntegratedAccSys.DAL
             }
         }
 
-        /// <summary>
-        /// Opens the shared connection. Called before each database operation.
-        /// </summary>
         public void Open()
         {
             if (_conn == null)
@@ -45,26 +43,17 @@ namespace IntegratedAccSys.DAL
                 _conn.Open();
         }
 
-        /// <summary>
-        /// Closes the shared connection. Called after each database operation.
-        /// </summary>
         public void Close()
         {
             if (_conn != null && _conn.State == ConnectionState.Open)
                 _conn.Close();
         }
 
-        /// <summary>
-        /// Reads data using a stored procedure. SqlCommand and SqlDataAdapter are
-        /// created and disposed locally; SqlConnection is opened/closed per call.
-        /// </summary>
         public DataTable SelectData(string sp, SqlParameter[]? para)
         {
             Open();
             try
             {
-                // SqlCommand and SqlDataAdapter are local — disposed immediately
-                // after Fill completes.
                 using (SqlCommand cmd = new SqlCommand(sp, _conn!))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -85,16 +74,11 @@ namespace IntegratedAccSys.DAL
             }
         }
 
-        /// <summary>
-        /// Executes a stored procedure (insert/update/delete). SqlCommand is created
-        /// and disposed locally; SqlConnection is opened/closed per call.
-        /// </summary>
         public void ExecuteCmd(string sp, SqlParameter[]? para)
         {
             Open();
             try
             {
-                // SqlCommand is local — disposed via using.
                 using (SqlCommand cmd = new SqlCommand(sp, _conn!))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -110,11 +94,11 @@ namespace IntegratedAccSys.DAL
         }
 
         /// <summary>
-        /// Reads data using raw SQL text. SqlCommand and SqlDataAdapter are created
-        /// and disposed locally; SqlConnection is opened/closed per call.
+        /// Reads data using raw SQL text. Now validates stored procedure names.
         /// </summary>
         public DataTable SelectData(string query)
         {
+            ValidateStoredProcedureCall(query, "SelectData");
             Open();
             try
             {
@@ -136,11 +120,11 @@ namespace IntegratedAccSys.DAL
         }
 
         /// <summary>
-        /// Executes raw SQL text (insert/update/delete). SqlCommand is created and
-        /// disposed locally; SqlConnection is opened/closed per call.
+        /// Executes raw SQL text. Now validates stored procedure names.
         /// </summary>
         public void ExecuteCmd(string query)
         {
+            ValidateStoredProcedureCall(query, "ExecuteCmd");
             Open();
             try
             {
@@ -157,9 +141,30 @@ namespace IntegratedAccSys.DAL
         }
 
         /// <summary>
-        /// Disposes the shared SqlConnection. Call when finished with the instance.
-        /// Safe to call multiple times.
+        /// Validates that the input is a valid stored procedure name.
+        /// Rejects raw SQL queries to prevent SQL injection attacks.
         /// </summary>
+        private static void ValidateStoredProcedureCall(string query, string methodName)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+                throw new SqlInjectionException($"[{methodName}] Empty procedure name.");
+
+            if (query.Length > 128)
+                throw new SqlInjectionException($"[{methodName}] Name exceeds 128 chars.");
+
+            if (!Regex.IsMatch(query, @"^[a-zA-Z_][a-zA-Z0-9_]*$"))
+                throw new SqlInjectionException($"[{methodName}] Invalid procedure format.");
+
+            string upper = query.ToUpperInvariant();
+            string[] blocked = { "SELECT", "INSERT", "UPDATE", "DELETE", "DROP", "CREATE", 
+                "ALTER", "TRUNCATE", "EXEC", "UNION", "WHERE", "--", "/*", "*/", ";", 
+                "xp_", "sp_", "0x", "'", "\"", "INFORMATION_SCHEMA" };
+            
+            foreach (var p in blocked)
+                if (upper.Contains(p))
+                    throw new SqlInjectionException($"[{methodName}] Blocked pattern: {p}");
+        }
+
         public void Dispose()
         {
             if (_conn != null)
@@ -168,5 +173,15 @@ namespace IntegratedAccSys.DAL
                 _conn = null;
             }
         }
+    }
+
+    /// <summary>
+    /// Exception thrown when SQL injection patterns are detected.
+    /// </summary>
+    public class SqlInjectionException : Exception
+    {
+        public SqlInjectionException() { }
+        public SqlInjectionException(string message) : base(message) { }
+        public SqlInjectionException(string message, Exception inner) : base(message, inner) { }
     }
 }
