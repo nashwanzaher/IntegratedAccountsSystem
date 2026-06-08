@@ -361,3 +361,21 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+# ============================================
+# Custom Exclusions - IntegratedAccountsSystem
+# ============================================
+
+# AI/Matrix Agent workspace
+.minimax/
+
+# Project documentation and reports
+CMP_*.md
+CMP_*.pdf
+Reports/
+docs/
+
+# Temporary scripts
+fix_users.ps1
+
+# HTML Presentation files
+CMP_Presentation/
