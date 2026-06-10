@@ -1,0 +1,4772 @@
+[
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsAccounts",
+        "File":  "src\\IntegratedAccSys.BL\\Accounts\\clsAccounts.cs",
+        "Line":  12,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  15
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsBonds",
+        "File":  "src\\IntegratedAccSys.BL\\Bonds\\clsBonds.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "CRITICAL",
+        "Kind":  "Class",
+        "Identifier":  "clsjournal",
+        "File":  "src\\IntegratedAccSys.BL\\Journal\\clsjournal.cs",
+        "Line":  17,
+        "Issue":  "All lowercase identifier",
+        "Impact":  "Identifier starts with lowercase and contains no uppercase letters. Violates PascalCase/camelCase.",
+        "RefCount":  16
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsPurchases",
+        "File":  "src\\IntegratedAccSys.BL\\Purchases\\clsPurchases.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsSales",
+        "File":  "src\\IntegratedAccSys.BL\\Sales\\clsSales.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsInventory",
+        "File":  "src\\IntegratedAccSys.BL\\Stores\\clsInventory.cs",
+        "Line":  12,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  23
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsSysFormat",
+        "File":  "src\\IntegratedAccSys.BL\\SysFormat\\clsSysFormat.cs",
+        "Line":  12,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  37
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsUsers",
+        "File":  "src\\IntegratedAccSys.BL\\Users\\clsUsers.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  62
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "clsCN",
+        "File":  "src\\IntegratedAccSys.DAL\\clsCN.cs",
+        "Line":  21,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  239
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmMainWindow",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmAccSheet",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmAccSheetReport",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheetReport.cs",
+        "Line":  35,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmChartOfAccounts",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmChartOfAccountsDoc",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccountsDoc.cs",
+        "Line":  30,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmFinalAccounts",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmFinalAccounts.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmSelectAccount",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmSelectAccount.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  58
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmTrailBalance",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmTrailBalance.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmBonds",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmJournal",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmPostingUnPosting",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmPurchasesBill",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmPurReturnBill",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmSelectSupplier",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSelectSupplier.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmSuppleirs",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmReportViewer",
+        "File":  "src\\IntegratedAccSys.PL\\Reports\\frmReportViewer.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  26
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmCustomers",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmSaleReturnBill",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmSalesBill",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmSelectCusromer",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSelectCusromer.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmCategories",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmInventoryMovement",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInventoryMovement.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmInvventroy",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInvventroy.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmProducts",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmSelectItem",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmSelectItem.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmStores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmUnits",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmAccountsJoin",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmBackUps",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBackUps.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmBanks",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmCompanies",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmConnSettings",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmConnSettings.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmCurrencies",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmFunds",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmVATSettings",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmVATSettings.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmLogin",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmLogin.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmPrivillages",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmPrivillages.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Class",
+        "Identifier":  "frmUsers",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "clsUsers",
+        "File":  "src\\IntegratedAccSys.BL\\Security\\PrivilegeHelper.cs",
+        "Line":  84,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  62
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "clsCN",
+        "File":  "src\\IntegratedAccSys.DAL\\clsCN.cs",
+        "Line":  26,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  239
+    },
+    {
+        "Severity":  "CRITICAL",
+        "Kind":  "Method",
+        "Identifier":  "object",
+        "File":  "src\\IntegratedAccSys.DAL\\DbContextProvider.cs",
+        "Line":  17,
+        "Issue":  "All lowercase identifier",
+        "Impact":  "Identifier starts with lowercase and contains no uppercase letters. Violates PascalCase/camelCase.",
+        "RefCount":  429
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmMainWindow",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  25,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmMainWindow_Load",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  121,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnVat_Click",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  291,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAccountsJoin_Click",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  313,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmAccSheetReport",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmAccSheet",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  19,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmAccSheet_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  29,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrencies_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  36,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  48,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  64,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheet.cs",
+        "Line":  69,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmAccSheetReport",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheetReport.cs",
+        "Line":  51,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheetReport.cs",
+        "Line":  101,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheetReport.cs",
+        "Line":  111,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmAccSheetReport_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmAccSheetReport.cs",
+        "Line":  163,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmChartOfAccounts",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  75,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmChartOfAccountsDoc",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  77,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  82,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  108,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtTag_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  118,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  151,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccNo_Leave",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  213,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  234,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnUpdate_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  260,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDelete_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  309,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccNo_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  352,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccLevel_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  360,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDebitor_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  368,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCreditor_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  381,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtBalance_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  394,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmChartOfAccounts_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccounts.cs",
+        "Line":  407,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmChartOfAccountsDoc",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccountsDoc.cs",
+        "Line":  46,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmChartOfAccountsDoc_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccountsDoc.cs",
+        "Line":  140,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccountsDoc.cs",
+        "Line":  166,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmChartOfAccountsDoc.cs",
+        "Line":  176,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmFinalAccounts",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmFinalAccounts.cs",
+        "Line":  29,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmFinalAccounts_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmFinalAccounts.cs",
+        "Line":  62,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmFinalAccounts.cs",
+        "Line":  76,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmFinalAccounts.cs",
+        "Line":  81,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrencies_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmFinalAccounts.cs",
+        "Line":  108,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmFinalAccounts.cs",
+        "Line":  119,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectAccount",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmSelectAccount.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  58
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSearch_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmSelectAccount.cs",
+        "Line":  41,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmSelectAccount.cs",
+        "Line":  51,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellClick",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmSelectAccount.cs",
+        "Line":  56,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmTrailBalance",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmTrailBalance.cs",
+        "Line":  24,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmTrailBalance_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmTrailBalance.cs",
+        "Line":  56,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrencies_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmTrailBalance.cs",
+        "Line":  71,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmTrailBalance.cs",
+        "Line":  82,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmTrailBalance.cs",
+        "Line":  108,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Accounts\\frmTrailBalance.cs",
+        "Line":  113,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmBonds",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  22,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  39,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  44,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmBonds_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  61,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrency_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  77,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbFunds_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  88,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  121,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAmount_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  169,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCurrVal_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  174,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAddRow_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  179,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEditRow_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  185,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDelRaw_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  198,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  280,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  296,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtBNo_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  354,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnLast_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  367,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnFirst_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  372,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPerv_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  377,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNext_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  391,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  426,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  438,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Bonds\\frmBonds.cs",
+        "Line":  450,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmJournal",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  24,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDebitor_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  37,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCreditor_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  49,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCurrVal_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  61,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrency_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  73,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  85,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnInsert_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  136,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_RowsAdded",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  184,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  229,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  332,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  369,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtJoNo_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  451,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  457,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnFirst_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  462,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnLast_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  467,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPerv_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  472,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNext_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  486,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  537,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  579,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  607,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmJournal_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmJournal.cs",
+        "Line":  620,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPostingUnPosting",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  29,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPostingUnPosting_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  127,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  204,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellContentClick",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  216,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnUndoPosting_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  271,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPosing_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  276,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Journal\\frmPostingUnPosting.cs",
+        "Line":  281,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectSupplier",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPurchasesBill",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  33,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPurchasesBill_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  77,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSuppName_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  91,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrencies_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  105,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbUnits_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  116,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbFunds_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  127,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  138,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnInsert_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  195,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtQty_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  246,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtPrice_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  251,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDisCount_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  256,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtVAT_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  261,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_RowsAdded",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  266,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  271,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  320,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  640,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  753,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtBNo_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  859,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  873,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnFirst_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  878,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnLast_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  883,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrev_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  888,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNext_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  901,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_Leave",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  915,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbPaymentMethod_SelectedValueChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  939,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurchasesBill.cs",
+        "Line":  963,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectSupplier",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPurReturnBill",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  33,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPurReturnBill_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  77,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSuppName_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  85,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrencies_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  99,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbUnits_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  110,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbFunds_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  121,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  132,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnInsert_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  191,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtQty_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  242,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtPrice_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  247,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDisCount_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  252,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtVAT_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  257,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_RowsAdded",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  262,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  267,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  316,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  639,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  755,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtBNo_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  863,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  877,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnFirst_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  882,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnLast_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  887,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrev_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  892,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNext_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  906,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_Leave",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  920,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbPaymentMethod_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  941,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmPurReturnBill.cs",
+        "Line":  965,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectSupplier",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSelectSupplier.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectSupplier_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSelectSupplier.cs",
+        "Line":  41,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSearch_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSelectSupplier.cs",
+        "Line":  52,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSelectSupplier.cs",
+        "Line":  57,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSuppleirs",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  19,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSuppleirs_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  49,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSuppAccCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  57,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  73,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtEmail_Validated",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  78,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnBrowes_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  89,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnClear_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  99,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  104,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  124,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  133,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  162,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Purchases\\frmSuppleirs.cs",
+        "Line":  190,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmReportViewer",
+        "File":  "src\\IntegratedAccSys.PL\\Reports\\frmReportViewer.cs",
+        "Line":  23,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  26
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmReportViewer_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Reports\\frmReportViewer.cs",
+        "Line":  33,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Reports\\frmReportViewer.cs",
+        "Line":  109,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCustomers",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  48,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCustomers_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  53,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  61,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnBrowes_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  81,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnClear_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  91,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  106,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCustAccCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  111,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtEmail_Validated",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  127,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  138,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  173,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmCustomers.cs",
+        "Line":  208,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectCusromer",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSaleReturnBill",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  35,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSaleReturnBill_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  79,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCustName_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  87,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrencies_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  103,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbUnits_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  114,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbFunds_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  125,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  136,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnInsert_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  199,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtQty_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  259,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtPrice_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  264,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDisCount_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  269,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtVAT_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  274,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_RowsAdded",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  279,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  284,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  333,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  685,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  798,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtBNo_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  910,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  924,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnFirst_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  929,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnLast_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  934,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrev_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  939,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNext_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  954,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_Leave",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  968,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbPaymentMethod_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  990,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSaleReturnBill.cs",
+        "Line":  1014,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectCusromer",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSalesBill",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  35,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSalesBill_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  81,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCustName_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  96,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbCurrencies_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  112,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbUnits_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  123,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbFunds_SelectedIndexChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  134,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  145,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnInsert_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  207,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtQty_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  268,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtPrice_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  273,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDisCount_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  278,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtVAT_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  283,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_RowsAdded",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  288,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  293,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  341,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  688,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  800,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtBNo_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  910,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSearch_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  924,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnFirst_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  929,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnLast_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  935,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrev_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  941,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNext_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  955,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtProdCode_Leave",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  969,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "cbPaymentMethod_SelectedValueChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  993,
+        "Issue":  "Hungarian prefix \u0027cb\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cb\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSalesBill.cs",
+        "Line":  1017,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectCusromer",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSelectCusromer.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectCusromer_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSelectCusromer.cs",
+        "Line":  40,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSearch_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSelectCusromer.cs",
+        "Line":  49,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Sales\\frmSelectCusromer.cs",
+        "Line":  54,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "clsUsers",
+        "File":  "src\\IntegratedAccSys.PL\\Security\\PrivilegeApplier.cs",
+        "Line":  29,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  62
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCategories",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  64,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCategories_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  81,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  91,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  110,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  115,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  131,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  147,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtInvCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  165,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtInventoryAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  180,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatSaleDiscountAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  195,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatSaleVatAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  211,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatSaleQtyFreeAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  227,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatSaleAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  243,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatSaleReturnAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  259,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatSaleCostAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  275,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatSaleRevenuseAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  291,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatPurchaseDiscountAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  307,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatPurchaseVatAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  323,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCaPurchaseQtyFreeAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  339,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatPurchaseAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  355,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCatPurchaseReturnAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  371,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmInventoryMovement",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInventoryMovement.cs",
+        "Line":  24,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmInventoryMovement_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInventoryMovement.cs",
+        "Line":  48,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInventoryMovement.cs",
+        "Line":  61,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInventoryMovement.cs",
+        "Line":  66,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInventoryMovement.cs",
+        "Line":  97,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmInvventroy",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInvventroy.cs",
+        "Line":  24,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmInvventroy_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInvventroy.cs",
+        "Line":  48,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInvventroy.cs",
+        "Line":  61,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInvventroy.cs",
+        "Line":  66,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnPrint_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInvventroy.cs",
+        "Line":  90,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmProducts",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  65,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmProducts_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  70,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  78,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  100,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  121,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  150,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  180,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnBrowes_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  198,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnClear_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  208,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmSelectItem",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmSelectItem.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSearch_TextChanged",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmSelectItem.cs",
+        "Line":  22,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmSelectItem.cs",
+        "Line":  29,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmSelectItem.cs",
+        "Line":  35,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmStores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmStores_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  46,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  54,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  59,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  65,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  72,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  86,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  101,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmUnits",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  45,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  50,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmUnits_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  57,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  65,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  71,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  85,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  100,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmAccountsJoin",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  31,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtInventoryCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  36,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDiscountRecievedCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  51,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDiscountAllowedCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  66,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtVatPurchasesCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  81,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtVatSalesCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  96,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  122,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  128,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnWipe_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  139,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  145,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSalesRevenuseCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  150,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtSaleCostCode_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmAccountsJoin.cs",
+        "Line":  165,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmBackUps",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBackUps.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEXit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBackUps.cs",
+        "Line":  21,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnBackUp_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBackUps.cs",
+        "Line":  27,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnRestoreDB_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBackUps.cs",
+        "Line":  55,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmBanks",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  41,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  51,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  58,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  93,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  134,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellClick",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  155,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  166,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmBanks_Load",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmBanks.cs",
+        "Line":  185,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCompanies",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  58,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  74,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnBrawse_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  81,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnClear_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  91,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  96,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_DoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  122,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  144,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  170,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCompanies_Load",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCompanies.cs",
+        "Line":  181,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmConnSettings",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmConnSettings.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmConnSettings.cs",
+        "Line":  20,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSave_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmConnSettings.cs",
+        "Line":  30,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmConnSettings.cs",
+        "Line":  50,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmConnSettings.cs",
+        "Line":  67,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCurrencies",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  17,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmCurrencies_Load",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  67,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  85,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtCurrVal_KeyPress",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  94,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  113,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellClick",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  148,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  161,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  183,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmCurrencies.cs",
+        "Line":  207,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmFunds",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  18,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  41,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  51,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtAccNo_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  57,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  94,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  135,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmFunds_Load",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  157,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_CellDoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  164,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  10
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmFunds.cs",
+        "Line":  170,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmVATSettings",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmVATSettings.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmVATSettings.cs",
+        "Line":  20,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSave_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmVATSettings.cs",
+        "Line":  26,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnWipe_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmVATSettings.cs",
+        "Line":  34,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmVATSettings.cs",
+        "Line":  44,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDisplay_Click",
+        "File":  "src\\IntegratedAccSys.PL\\SysFormat\\frmVATSettings.cs",
+        "Line":  49,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmLogin",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmLogin.cs",
+        "Line":  16,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnLogin_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmLogin.cs",
+        "Line":  21,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "CRITICAL",
+        "Kind":  "Method",
+        "Identifier":  "fields",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmLogin.cs",
+        "Line":  36,
+        "Issue":  "All lowercase identifier",
+        "Impact":  "Identifier starts with lowercase and contains no uppercase letters. Violates PascalCase/camelCase.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmMainWindow",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmLogin.cs",
+        "Line":  43,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  6
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmLogin.cs",
+        "Line":  58,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPrivillages",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmPrivillages.cs",
+        "Line":  20,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmPrivillages_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmPrivillages.cs",
+        "Line":  41,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNewUser_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmPrivillages.cs",
+        "Line":  61,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmUsers",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmPrivillages.cs",
+        "Line":  63,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmPrivillages.cs",
+        "Line":  67,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnSavePrivillages_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmPrivillages.cs",
+        "Line":  129,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmUsers",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  19,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "dgvData_DoubleClick",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  61,
+        "Issue":  "Hungarian prefix \u0027dgv\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027dgv\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnExit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  81,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  33
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnNew_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  98,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  21
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnBrawse_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  105,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  2
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnClear_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  116,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnAdd_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  126,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  19
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnEdit_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  156,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  13
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "btnDel_Click",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  182,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  17
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtFullName_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  200,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtID_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  208,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtPWD_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  216,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtMobile_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  224,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtUserEmail_KeyDown",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  232,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtFullName_Enter",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  240,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtID_Enter",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  245,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtPWD_Enter",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  250,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtMobile_Enter",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  255,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "txtUserEmail_Enter",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  260,
+        "Issue":  "Hungarian prefix \u0027txt\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027txt\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Method",
+        "Identifier":  "frmUsers_Load",
+        "File":  "src\\IntegratedAccSys.PL\\Users\\frmUsers.cs",
+        "Line":  265,
+        "Issue":  "Hungarian prefix \u0027frm\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027frm\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  1
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Property",
+        "Identifier":  "clsAccounts",
+        "File":  "src\\IntegratedAccSys.BL\\Accounts\\clsAccounts.cs",
+        "Line":  12,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  15
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Property",
+        "Identifier":  "clsBonds",
+        "File":  "src\\IntegratedAccSys.BL\\Bonds\\clsBonds.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  3
+    },
+    {
+        "Severity":  "CRITICAL",
+        "Kind":  "Property",
+        "Identifier":  "clsjournal",
+        "File":  "src\\IntegratedAccSys.BL\\Journal\\clsjournal.cs",
+        "Line":  17,
+        "Issue":  "All lowercase identifier",
+        "Impact":  "Identifier starts with lowercase and contains no uppercase letters. Violates PascalCase/camelCase.",
+        "RefCount":  16
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Property",
+        "Identifier":  "clsPurchases",
+        "File":  "src\\IntegratedAccSys.BL\\Purchases\\clsPurchases.cs",
+        "Line":  14,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Property",
+        "Identifier":  "clsSales",
+        "File":  "src\\IntegratedAccSys.BL\\Sales\\clsSales.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Property",
+        "Identifier":  "clsInventory",
+        "File":  "src\\IntegratedAccSys.BL\\Stores\\clsInventory.cs",
+        "Line":  12,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  23
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Property",
+        "Identifier":  "clsSysFormat",
+        "File":  "src\\IntegratedAccSys.BL\\SysFormat\\clsSysFormat.cs",
+        "Line":  12,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  37
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Property",
+        "Identifier":  "clsUsers",
+        "File":  "src\\IntegratedAccSys.BL\\Users\\clsUsers.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  62
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "clsAccounts",
+        "File":  "src\\IntegratedAccSys.BL\\Accounts\\clsAccounts.cs",
+        "Line":  12,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  15
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "clsSales",
+        "File":  "src\\IntegratedAccSys.BL\\Sales\\clsSales.cs",
+        "Line":  15,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "clsUsers",
+        "File":  "src\\IntegratedAccSys.BL\\Users\\clsUsers.cs",
+        "Line":  13,
+        "Issue":  "Hungarian prefix \u0027cls\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027cls\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  62
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "btnNew",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  19,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  5
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "btnAdd",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  20,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  14
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "btnEdit",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  21,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  8
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "btnDel",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  22,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  7
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Field",
+        "Identifier":  "btnPrint",
+        "File":  "src\\IntegratedAccSys.PL\\frmMainWindow.cs",
+        "Line":  23,
+        "Issue":  "Hungarian prefix \u0027btn\u0027",
+        "Impact":  "Legacy VB6-style prefix \u0027btn\u0027 is non-conformant to .NET naming guidelines.",
+        "RefCount":  4
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Namespace",
+        "Identifier":  "IntegratedAccSys.PL.stores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmCategories.cs",
+        "Line":  12,
+        "Issue":  "Namespace segment \u0027stores\u0027 starts with lowercase",
+        "Impact":  "Namespace segments should be PascalCase. This is non-conformant to Microsoft guidelines (CAP-7, NA-1).",
+        "RefCount":  null
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Namespace",
+        "Identifier":  "IntegratedAccSys.PL.stores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInventoryMovement.cs",
+        "Line":  14,
+        "Issue":  "Namespace segment \u0027stores\u0027 starts with lowercase",
+        "Impact":  "Namespace segments should be PascalCase. This is non-conformant to Microsoft guidelines (CAP-7, NA-1).",
+        "RefCount":  null
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Namespace",
+        "Identifier":  "IntegratedAccSys.PL.stores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmInvventroy.cs",
+        "Line":  14,
+        "Issue":  "Namespace segment \u0027stores\u0027 starts with lowercase",
+        "Impact":  "Namespace segments should be PascalCase. This is non-conformant to Microsoft guidelines (CAP-7, NA-1).",
+        "RefCount":  null
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Namespace",
+        "Identifier":  "IntegratedAccSys.PL.stores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmProducts.cs",
+        "Line":  12,
+        "Issue":  "Namespace segment \u0027stores\u0027 starts with lowercase",
+        "Impact":  "Namespace segments should be PascalCase. This is non-conformant to Microsoft guidelines (CAP-7, NA-1).",
+        "RefCount":  null
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Namespace",
+        "Identifier":  "IntegratedAccSys.PL.stores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmSelectItem.cs",
+        "Line":  11,
+        "Issue":  "Namespace segment \u0027stores\u0027 starts with lowercase",
+        "Impact":  "Namespace segments should be PascalCase. This is non-conformant to Microsoft guidelines (CAP-7, NA-1).",
+        "RefCount":  null
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Namespace",
+        "Identifier":  "IntegratedAccSys.PL.stores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmStores.cs",
+        "Line":  12,
+        "Issue":  "Namespace segment \u0027stores\u0027 starts with lowercase",
+        "Impact":  "Namespace segments should be PascalCase. This is non-conformant to Microsoft guidelines (CAP-7, NA-1).",
+        "RefCount":  null
+    },
+    {
+        "Severity":  "HIGH",
+        "Kind":  "Namespace",
+        "Identifier":  "IntegratedAccSys.PL.stores",
+        "File":  "src\\IntegratedAccSys.PL\\Stores\\frmUnits.cs",
+        "Line":  12,
+        "Issue":  "Namespace segment \u0027stores\u0027 starts with lowercase",
+        "Impact":  "Namespace segments should be PascalCase. This is non-conformant to Microsoft guidelines (CAP-7, NA-1).",
+        "RefCount":  null
+    }
+]

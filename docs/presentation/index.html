@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntegratedAccountsSystem - Architecture Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide img {
+            width: 100%;
+            height: calc(100% - 40px);
+            object-fit: contain;
+            background: white;
+        }
+
+        .slide-num {
+            height: 40px;
+            background: #1a365d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .cover {
+            background: linear-gradient(135deg, #1a365d 0%, #0d9488 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cover h2 {
+            font-size: 28px;
+            color: #0d9488;
+            margin-bottom: 40px;
+        }
+
+        .cover p {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        .meta {
+            position: absolute;
+            bottom: 40px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .meta span {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Slide 1: Cover -->
+    <div class="slide">
+        <img src="slides/slide_01_cover.png" alt="Cover">
+        <div class="slide-num">1 / 12</div>
+    </div>
+    <!-- Slide 2: Solution Structure -->
+    <div class="slide">
+        <img src="slides/slide_02_solution_structure.png" alt="Solution Structure">
+        <div class="slide-num">2 / 12</div>
+    </div>
+    <!-- Slide 3: Architecture Diagram -->
+    <div class="slide">
+        <img src="slides/slide_03_architecture_diagram.png" alt="Architecture Diagram">
+        <div class="slide-num">3 / 12</div>
+    </div>
+    <!-- Slide 4: Authentication Flow -->
+    <div class="slide">
+        <img src="slides/slide_04_authentication_flow.png" alt="Authentication Flow">
+        <div class="slide-num">4 / 12</div>
+    </div>
+    <!-- Slide 5: Session Management -->
+    <div class="slide">
+        <img src="slides/slide_05_session_management.png" alt="Session Management">
+        <div class="slide-num">5 / 12</div>
+    </div>
+    <!-- Slide 6: Sales Bill Data Flow -->
+    <div class="slide">
+        <img src="slides/slide_06_sales_bill_flow.png" alt="Sales Bill Data Flow">
+        <div class="slide-num">6 / 12</div>
+    </div>
+    <!-- Slide 7: Journal Entry Data Flow -->
+    <div class="slide">
+        <img src="slides/slide_07_journal_flow.png" alt="Journal Entry Data Flow">
+        <div class="slide-num">7 / 12</div>
+    </div>
+    <!-- Slide 8: Privilege System -->
+    <div class="slide">
+        <img src="slides/slide_08_privilege_system.png" alt="Privilege System">
+        <div class="slide-num">8 / 12</div>
+    </div>
+    <!-- Slide 9: Database Schema -->
+    <div class="slide">
+        <img src="slides/slide_09_database_schema.png" alt="Database Schema">
+        <div class="slide-num">9 / 12</div>
+    </div>
+    <!-- Slide 10: Class Relationships -->
+    <div class="slide">
+        <img src="slides/slide_10_class_relationships.png" alt="Class Relationships">
+        <div class="slide-num">10 / 12</div>
+    </div>
+    <!-- Slide 11: Security Architecture -->
+    <div class="slide">
+        <img src="slides/slide_11_security_architecture.png" alt="Security Architecture">
+        <div class="slide-num">11 / 12</div>
+    </div>
+    <!-- Slide 12: End-to-End Flow -->
+    <div class="slide">
+        <img src="slides/slide_12_end_to_end_flow.png" alt="End-to-End Flow">
+        <div class="slide-num">12 / 12</div>
+    </div>
+</body>
+
+</html>

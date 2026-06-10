@@ -1,0 +1,8 @@
+$env:PGPASSWORD = "656650"
+$psql = "C:\Program Files\PostgreSQL\17\bin\psql.exe"
+Write-Host "=== tblapprovalworkflows ==="
+& $psql -h localhost -U postgres -d IntegratedAccSys -t -A -c "SELECT column_name||'|'||data_type||'|'||is_nullable FROM information_schema.columns WHERE table_schema='public' AND table_name='tblapprovalworkflows' ORDER BY ordinal_position;"
+Write-Host "`n=== tblapprovallevels ==="
+& $psql -h localhost -U postgres -d IntegratedAccSys -t -A -c "SELECT column_name||'|'||data_type||'|'||is_nullable FROM information_schema.columns WHERE table_schema='public' AND table_name='tblapprovallevels' ORDER BY ordinal_position;"
+Write-Host "`n=== SAMPLE DATA tblapprovalworkflows ==="
+& $psql -h localhost -U postgres -d IntegratedAccSys -t -A -c "SELECT * FROM tblapprovalworkflows LIMIT 3;"
