@@ -97,7 +97,7 @@ namespace IntegratedAccSys.PL.SysFormat
             {
                 e.Handled = true;
             }
-            if (e.KeyChar == '.' && (sender as TextBox).Text.Contains("."))
+            if (e.KeyChar == '.' && (sender as TextBox)?.Text.Contains(".") == true)
             {
                 e.Handled = true;
             }
