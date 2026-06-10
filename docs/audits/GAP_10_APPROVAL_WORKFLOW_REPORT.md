@@ -139,7 +139,7 @@ SELECT fn_g10_approval_valid_transition('APPROVED','PENDING');   -- false  (term
 ### 5.2 `trg_g10_approval_request_status_update`
 
 - **التوقيت:** AFTER INSERT على `tblapprovalactions`
-- **الفعل:** 
+- **الفعل:**
   1. يقرأ `status` الحالي من `tblapprovalrequests`
   2. يَحسب الحالة الجديدة عبر `fn_g10_approval_compute_status()`
   3. يَتحقق من صلاحية الانتقال عبر `fn_g10_approval_valid_transition()`
