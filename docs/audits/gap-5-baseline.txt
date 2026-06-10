@@ -1,0 +1,7 @@
+﻿-- GAP 5 BASELINE (captured 2026-06-11 01:27:19) --
+total_user_indexes=229
+unused_indexes=219
+high_seq_scan_tables=0
+wasted_bytes=38 MB
+composite_indexes=33
+partial_indexes=8
