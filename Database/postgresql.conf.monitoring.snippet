@@ -1,0 +1,72 @@
+# =====================================================================
+# IntegratedAccSys — postgresql.conf snippet (Gap #3 Monitoring)
+# =====================================================================
+# Date        : 2026-06-10
+# Branch      : feat/gap-3-monitoring-extensions
+# Author      : GitHub Copilot (MiniMax-M3)
+# Scope       : Settings that require a PostgreSQL service restart
+#               to activate query monitoring.
+#               Apply by appending the lines below to
+#               C:/Program Files/PostgreSQL/17/data/postgresql.conf
+#               (or equivalent on Linux) and restarting the service.
+#
+# Verified    : Tested on PostgreSQL 17.10 / Windows.
+# Rollback    : Comment out the lines and restart again.
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# 1. shared_preload_libraries — required for monitoring extensions
+# ---------------------------------------------------------------------
+# pg_stat_statements is INSTALLED (from gap 2 SQL) but it is NOT
+# actively tracking queries until it is in shared_preload_libraries
+# AND the server is restarted.
+shared_preload_libraries = 'pg_stat_statements'
+
+# When auto_explain becomes available on this PG build, add it:
+# shared_preload_libraries = 'pg_stat_statements,auto_explain'
+
+# ---------------------------------------------------------------------
+# 2. pg_stat_statements configuration
+# ---------------------------------------------------------------------
+# Track statements longer than 500 ms (i.e. don't pollute stats
+# with trivial queries). Max 5000 distinct statements, 5 KB each.
+pg_stat_statements.max           = 5000
+pg_stat_statements.track         = 'top'         -- top-level only
+pg_stat_statements.track_utility = off           -- skip utility cmds
+pg_stat_statements.save          = on            -- survive restarts
+
+# ---------------------------------------------------------------------
+# 3. auto_explain — automatic EXPLAIN of slow queries
+# ---------------------------------------------------------------------
+# When the extension is available, these settings auto-log the
+# EXPLAIN plan of every slow query. Uncomment ONLY after the
+# auto_explain extension is installed.
+#
+# auto_explain.log_min_duration     = '1s'        -- log queries > 1s
+# auto_explain.log_analyze          = on          -- include actual row counts
+# auto_explain.log_buffers          = on          -- include buffer usage
+# auto_explain.log_format           = 'json'      -- machine-parseable
+# auto_explain.log_nested_statements = on
+# auto_explain.sample_rate          = 1.0         -- log ALL slow queries
+
+# ---------------------------------------------------------------------
+# 4. I/O timing accuracy
+# ---------------------------------------------------------------------
+# Without this, blk_read_time / blk_write_time are always 0,
+# so I/O bottlenecks are invisible in pg_stat_statements and
+# pg_stat_user_tables.
+track_io_timing = on
+
+# ---------------------------------------------------------------------
+# 5. Activity tracking (usually on by default, document explicitly)
+# ---------------------------------------------------------------------
+track_activities = on
+track_counts     = on
+
+# ---------------------------------------------------------------------
+# 6. Statement-level log destinations (carry-over from gap 2)
+# ---------------------------------------------------------------------
+# log_destination = 'csvlog,stderr'  -- already in gap 2 snippet
+# logging_collector = on             -- already in gap 2 snippet
+# Recommended additional log line prefix for production:
+# log_line_prefix = '%t [%p]: db=%d,user=%u,app=%a,client=%h '
