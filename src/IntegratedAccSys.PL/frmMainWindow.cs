@@ -12,7 +12,6 @@ using IntegratedAccSys.BL;
 
 namespace IntegratedAccSys.PL
 {
-
     public partial class frmMainWindow : Form
     {
         BL.Users.ClsUsers cu = new BL.Users.ClsUsers();
@@ -26,8 +25,6 @@ namespace IntegratedAccSys.PL
         {
             InitializeComponent();
         }
-
-
 
 
         void getScreensDisplayPrivs()
@@ -86,11 +83,8 @@ namespace IntegratedAccSys.PL
                     bool isEnabled = dt.Rows[i][1] != DBNull.Value && Convert.ToInt32(dt.Rows[i][1]) == 1;
 
                     screens[i].Enabled = isEnabled;
-
                 }
-
             }
-
         }
 
         private void ConnSettings_Click(object sender, EventArgs e)
@@ -123,7 +117,8 @@ namespace IntegratedAccSys.PL
             // Phase 7: Validate session — block access if session is invalid or expired
             if (!SessionContext.Validate())
             {
-                MessageBox.Show("انتهت صلاحية الجلسة. يرجى تسجيل الدخول مرة أخرى.", "انتهاء الجلسة", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("انتهت صلاحية الجلسة. يرجى تسجيل الدخول مرة أخرى.", "انتهاء الجلسة",
+                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 SessionContext.End();
                 Application.Restart();
                 return;
@@ -211,7 +206,6 @@ namespace IntegratedAccSys.PL
             ffa.Text = "قائمة الميزانية العمومية";
             ffa.txtReportType.Text = Constants.ReportTypeBalanceSheet.ToString();
             ffa.ShowDialog();
-
         }
 
         private void ProfitAndLosses_Click(object sender, EventArgs e)
@@ -220,7 +214,6 @@ namespace IntegratedAccSys.PL
             ffa.Text = "قائمة الأرباح و الخسائر";
             ffa.txtReportType.Text = Constants.ReportTypeProfitAndLoss.ToString();
             ffa.ShowDialog();
-
         }
 
         private void Backup_Click(object sender, EventArgs e)
@@ -231,7 +224,6 @@ namespace IntegratedAccSys.PL
             fbu.txtBackType.Text = Constants.BackupTypeCreate.ToString();
             fbu.Text = "عمل نسخة إحتياطية";
             fbu.ShowDialog();
-
         }
 
         private void BackRestore_Click(object sender, EventArgs e)
