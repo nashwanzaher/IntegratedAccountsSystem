@@ -1,0 +1,35 @@
+# =====================================================================
+# IntegratedAccSys — pg_hba.conf snippet (Gap #2)
+# =====================================================================
+# Date        : 2026-06-10
+# Branch      : feat/gap-2-column-encryption-ssl
+# Author      : GitHub Copilot (MiniMax-M3)
+# Scope       : Force SSL for all `app_*` role connections.
+#               Apply by inserting the lines below INTO
+#               C:/Program Files/PostgreSQL/17/data/pg_hba.conf
+#               ABOVE the existing "host all all 127.0.0.1/32 scram-sha-256"
+#               line, then reload the service:
+#                   pg_ctl reload   -or-  SELECT pg_reload_conf();
+#
+# Format      : hostssl <db> <user> <cidr> <auth>
+# 'hostssl'   : only accept connections over SSL — plaintext is rejected.
+# =====================================================================
+
+# --- Replace the existing "host all all 127.0.0.1/32 scram-sha-256" line ---
+#     with these per-role rules. Passwords still use scram-sha-256.
+
+# --- Superuser maintenance (postgres, noufexerp) — TLS preferred but optional ---
+host    all             postgres        127.0.0.1/32            scram-sha-256
+host    all             noufexerp       127.0.0.1/32            scram-sha-256
+
+# --- Application least-privilege roles — SSL MANDATORY ---
+hostssl   IntegratedAccSys   app_admin     127.0.0.1/32   scram-sha-256
+hostssl   IntegratedAccSys   app_readwrite 127.0.0.1/32   scram-sha-256
+hostssl   IntegratedAccSys   app_readonly  127.0.0.1/32   scram-sha-256
+hostssl   IntegratedAccSys   app_auditor   127.0.0.1/32   scram-sha-256
+hostssl   IntegratedAccSys   app_reports   127.0.0.1/32   scram-sha-256
+hostssl   IntegratedAccSys   app_backup    127.0.0.1/32   scram-sha-256
+
+# --- Reject any non-SSL connection to the app database (defense in depth) ---
+# If the app_* lines above use hostssl, the * next line is a backstop.
+host    all             all             127.0.0.1/32            reject
