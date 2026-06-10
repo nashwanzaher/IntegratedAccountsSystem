@@ -1,4 +1,3 @@
-using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,6 +6,7 @@ using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace IntegratedAccSys.Reports
 {
