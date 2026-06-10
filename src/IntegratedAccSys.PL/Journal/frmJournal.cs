@@ -230,7 +230,8 @@ namespace IntegratedAccSys.PL.Journal
         {
             clearData();
             txtJNo.Text = cj.getNewJournalNo(Program.braCode).Rows[0][0].ToString();
-            txtNote.Focus(); ;
+            txtNote.Focus();
+            ;
         }
         void addJournalHeader()
         {

@@ -127,15 +127,23 @@ namespace IntegratedAccSys.PL.Accounts
                 // بناء سلسلة العمليات المحددة
                 //"1,2,3,"
                 string opType = string.Empty;
-                if (chkJournal.Checked) opType += "1,";
-                if (chkPayBond.Checked) opType += "2,";
-                if (chkRecieveBond.Checked) opType += "3,";
-                if (chkSells.Checked) opType += "4,";
-                if (chkBurchases.Checked) opType += "5,";
-                if (chkImport.Checked) opType += "6,";
-                if (chkExport.Checked) opType += "7,";
+                if (chkJournal.Checked)
+                    opType += "1,";
+                if (chkPayBond.Checked)
+                    opType += "2,";
+                if (chkRecieveBond.Checked)
+                    opType += "3,";
+                if (chkSells.Checked)
+                    opType += "4,";
+                if (chkBurchases.Checked)
+                    opType += "5,";
+                if (chkImport.Checked)
+                    opType += "6,";
+                if (chkExport.Checked)
+                    opType += "7,";
 
-                if (opType.EndsWith(",")) opType = opType.TrimEnd(',');
+                if (opType.EndsWith(","))
+                    opType = opType.TrimEnd(',');
 
                 Properties.Settings.Default.opTypeSelection = opType;
                 Properties.Settings.Default.Save();

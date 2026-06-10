@@ -1,4 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
+using Microsoft.Reporting.WinForms;
 using Microsoft.ReportingServices.Interfaces;
 using System;
 using System.Collections.Generic;

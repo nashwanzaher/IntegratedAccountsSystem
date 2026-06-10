@@ -24,13 +24,15 @@ namespace IntegratedAccSys.PL.Security
         /// </summary>
         public static void Apply(Form form, int windowID)
         {
-            if (form == null) return;
+            if (form == null)
+                return;
 
             ClsUsers users = new ClsUsers();
 
             // Resolve user code from current logged-in user (Program state)
             DataTable userDt = users.getUserNo(Program.userName, Program.braCode);
-            if (userDt.Rows.Count == 0) return;
+            if (userDt.Rows.Count == 0)
+                return;
 
             int userCode = Convert.ToInt32(userDt.Rows[0][0]);
             DataTable dt = users.getScreensPrivillages(userCode, windowID, Program.braCode);
@@ -53,7 +55,8 @@ namespace IntegratedAccSys.PL.Security
         private static void ApplyButton(Form form, string buttonName, DataRow row, string columnName)
         {
             Control[] controls = form.Controls.Find(buttonName, true);
-            if (controls.Length == 0) return;
+            if (controls.Length == 0)
+                return;
             controls[0].Enabled = row[columnName] != DBNull.Value && (bool)row[columnName];
         }
 

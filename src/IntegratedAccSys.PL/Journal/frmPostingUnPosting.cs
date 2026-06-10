@@ -58,13 +58,20 @@ namespace IntegratedAccSys.PL.Journal
 
         void getOpType()
         {
-            if (rbJurnalEntry.Checked) opType = 1;
-            if (rbMoneyPayBond.Checked) opType = 2;
-            if (rbMoneyRecieveBond.Checked) opType = 3;
-            if (rbSaleBill.Checked) opType = 4;
-            if (rbPurBill.Checked) opType = 5;
-            if (rbPurReturnBill.Checked) opType = 8;
-            if (rbSaleReturnBill.Checked) opType = 7;
+            if (rbJurnalEntry.Checked)
+                opType = 1;
+            if (rbMoneyPayBond.Checked)
+                opType = 2;
+            if (rbMoneyRecieveBond.Checked)
+                opType = 3;
+            if (rbSaleBill.Checked)
+                opType = 4;
+            if (rbPurBill.Checked)
+                opType = 5;
+            if (rbPurReturnBill.Checked)
+                opType = 8;
+            if (rbSaleReturnBill.Checked)
+                opType = 7;
 
 
         }
@@ -142,7 +149,8 @@ namespace IntegratedAccSys.PL.Journal
         void FillDgvData()
         {
             int i = 0;
-            if (dt == null) return;
+            if (dt == null)
+                return;
 
             dgvData.RowCount = dt.Rows.Count;
             if (dt.Rows.Count > 0)

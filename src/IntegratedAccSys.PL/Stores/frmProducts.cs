@@ -132,7 +132,8 @@ namespace IntegratedAccSys.PL.Stores
                 }
                 else
                 {
-                    MemoryStream ms = new MemoryStream(); ;
+                    MemoryStream ms = new MemoryStream();
+                    ;
                     pbImg.Image.Save(ms, pbImg.Image.RawFormat);
                     bImg = ms.ToArray();
                     ci.addProduct(Convert.ToInt32(txtProdNo.Text), txtProdName.Text, Convert.ToInt32(cbStores.SelectedValue), Convert.ToInt32(cbCategories.SelectedValue), Convert.ToInt32(cbUnits.SelectedValue), Convert.ToDecimal(txtQty.Text), Convert.ToDecimal(txtPrice.Text), bImg, "withImg");

@@ -30,6 +30,7 @@ namespace IntegratedAccSys.PL.Purchases
         int purDiscAccCode;
         int purQtyFreeAccCode;
         int purVatAccCode;
+
         public frmPurReturnBill()
         {
             InitializeComponent();
@@ -71,7 +72,6 @@ namespace IntegratedAccSys.PL.Purchases
             cbFunds.DataSource = csf.getAllFunds();
             cbFunds.ValueMember = "fundCode";
             cbFunds.DisplayMember = "fundName";
-
         }
 
         private void frmPurReturnBill_Load(object sender, EventArgs e)
@@ -173,18 +173,23 @@ namespace IntegratedAccSys.PL.Purchases
                 discountTotal += Convert.ToDouble(dgvData.Rows[i].Cells[7].Value);
                 vatTotal += Convert.ToDouble(dgvData.Rows[i].Cells[8].Value);
                 billNetTotal += Convert.ToDouble(dgvData.Rows[i].Cells[9].Value);
-                billTotal += (Convert.ToDouble(dgvData.Rows[i].Cells[5].Value) * Convert.ToDouble(dgvData.Rows[i].Cells[6].Value));
+                billTotal += (Convert.ToDouble(dgvData.Rows[i].Cells[5].Value) *
+                              Convert.ToDouble(dgvData.Rows[i].Cells[6].Value));
             }
+
             txtAllTotal.Text = billTotal.ToString("0.00");
             txtDiscountTotal.Text = discountTotal.ToString("0.00");
             txtVATTotal.Text = vatTotal.ToString("0.00");
             txtNetTotal.Text = billNetTotal.ToString("0.00");
         }
+
         void getTotal()
         {
-            vat = ((Convert.ToDouble(txtQty.Text) * Convert.ToDouble(txtPrice.Text)) - Convert.ToDouble(txtDisCount.Text)) * Convert.ToDouble(Properties.Settings.Default.VAT) / 100;
+            vat = ((Convert.ToDouble(txtQty.Text) * Convert.ToDouble(txtPrice.Text)) -
+                   Convert.ToDouble(txtDisCount.Text)) * Convert.ToDouble(Properties.Settings.Default.VAT) / 100;
             txtVAT.Text = vat.ToString();
-            subTotal = (Convert.ToDouble(txtQty.Text) * Convert.ToDouble(txtPrice.Text)) - Convert.ToDouble(txtDisCount.Text) + vat;
+            subTotal = (Convert.ToDouble(txtQty.Text) * Convert.ToDouble(txtPrice.Text)) -
+                Convert.ToDouble(txtDisCount.Text) + vat;
             txtTotal.Text = subTotal.ToString();
         }
 
@@ -195,6 +200,7 @@ namespace IntegratedAccSys.PL.Purchases
                 MessageBox.Show("يجب إختيار صنف أولاً", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             if (cbUnits.Text == "إختار وحدة")
             {
                 MessageBox.Show("يجب إختيار وحدة أولاً", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -203,7 +209,8 @@ namespace IntegratedAccSys.PL.Purchases
 
             if (txtQty.Text == "0.00")
             {
-                MessageBox.Show("يجب إختيار الكمية المطلوبة أولاً", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("يجب إختيار الكمية المطلوبة أولاً", "تنبيه", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
 
@@ -212,6 +219,7 @@ namespace IntegratedAccSys.PL.Purchases
                 MessageBox.Show("يجب تسعير هذا الصنف أولاً", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             DataTable dt = new DataTable();
             dt.Clear();
             dt = ci.getCategoryData(Convert.ToInt32(txtCatID.Text));
@@ -235,7 +243,10 @@ namespace IntegratedAccSys.PL.Purchases
             }
 
             getTotal();
-            dgvData.Rows.Add(txtProdCode.Text, txtProdName.Text, cbUnits.SelectedValue, cbUnits.Text, txtConversionFactor.Text, txtQty.Text, txtPrice.Text, txtDisCount.Text, txtVAT.Text, txtTotal.Text, txtCatID.Text, cbStores.SelectedValue, inventoryCode, purAccCode, purReturnAccCode, purDiscAccCode, purQtyFreeAccCode, purVatAccCode);
+            dgvData.Rows.Add(txtProdCode.Text, txtProdName.Text, cbUnits.SelectedValue, cbUnits.Text,
+                txtConversionFactor.Text, txtQty.Text, txtPrice.Text, txtDisCount.Text, txtVAT.Text, txtTotal.Text,
+                txtCatID.Text, cbStores.SelectedValue, inventoryCode, purAccCode, purReturnAccCode, purDiscAccCode,
+                purQtyFreeAccCode, purVatAccCode);
             resetRow();
         }
 
@@ -324,7 +335,6 @@ namespace IntegratedAccSys.PL.Purchases
         // function to add data into bonds,bills Header Table
         void addOperationHeader()
         {
-
             int Post = 0;
             if (chkPost.Checked)
             {
@@ -334,8 +344,14 @@ namespace IntegratedAccSys.PL.Purchases
             {
                 Post = 0;
             }
+
             int userCode = Convert.ToInt32(cu.getUserNo(Program.userName).Rows[0][0]);
-            ci.addOperationHdr(Convert.ToInt32(txtNo.Text), Convert.ToDateTime(dtpDate.Value.ToShortTimeString()), Convert.ToInt32(txtOpType.Text), Post, txtNote.Text, 0, 0, Convert.ToInt32(txtSuppCode.Text), userCode, DateTime.Now, Program.braCode, Convert.ToInt32(cbPaymentMethod.SelectedValue), Convert.ToInt32(txtFundCode.Text), Convert.ToDecimal(txtAllTotal.Text), Convert.ToDecimal(txtDiscountTotal.Text), Convert.ToDecimal(txtVATTotal.Text), Convert.ToDecimal(txtNetTotal.Text), Convert.ToInt32(txtJNo.Text), 0);
+            ci.addOperationHdr(Convert.ToInt32(txtNo.Text), Convert.ToDateTime(dtpDate.Value.ToShortTimeString()),
+                Convert.ToInt32(txtOpType.Text), Post, txtNote.Text, 0, 0, Convert.ToInt32(txtSuppCode.Text), userCode,
+                DateTime.Now, Program.braCode, Convert.ToInt32(cbPaymentMethod.SelectedValue),
+                Convert.ToInt32(txtFundCode.Text), Convert.ToDecimal(txtAllTotal.Text),
+                Convert.ToDecimal(txtDiscountTotal.Text), Convert.ToDecimal(txtVATTotal.Text),
+                Convert.ToDecimal(txtNetTotal.Text), Convert.ToInt32(txtJNo.Text), 0);
         }
 
         //function to add data into bonds,bills body table
@@ -356,8 +372,8 @@ namespace IntegratedAccSys.PL.Purchases
                     decimal currVal = Convert.ToDecimal(txtCurrVal.Text);
                     decimal conversionFactor = Convert.ToDecimal(dgvData.Rows[i].Cells[4].Value);
                     int opType = Convert.ToInt32(txtOpType.Text);
-                    ci.addOperationBody(prodCode, currID, unitID, Qty, price, discount, VAT, No, currVal, conversionFactor, opType);
-
+                    ci.addOperationBody(prodCode, currID, unitID, Qty, price, discount, VAT, No, currVal,
+                        conversionFactor, opType);
                 }
             }
         }
@@ -383,7 +399,8 @@ namespace IntegratedAccSys.PL.Purchases
                     int No = Convert.ToInt32(txtNo.Text);
 
                     int opType = Convert.ToInt32(txtOpType.Text);
-                    ci.addProductMovement(prodCode, BaseQty, BasePrice, unitID, storeID, catID, moveDate, No, conversionFactor, opType);
+                    ci.addProductMovement(prodCode, BaseQty, BasePrice, unitID, storeID, catID, moveDate, No,
+                        conversionFactor, opType);
                 }
             }
         }
@@ -440,7 +457,9 @@ namespace IntegratedAccSys.PL.Purchases
 
             int userCode = Convert.ToInt32(cu.getUserNo(Program.userName).Rows[0][0]);
             DateTime jDate = DateTime.Now;
-            cj.addJournalHeader(Convert.ToInt32(txtJNo.Text), Convert.ToDateTime(dtpDate.Value.ToShortDateString()), txtNote.Text, jType, jPost, Convert.ToDouble(txtNetTotal.Text), Convert.ToDouble(txtNetTotal.Text), 0, userCode, jDate, Program.braCode, Convert.ToInt32(txtOpType.Text));
+            cj.addJournalHeader(Convert.ToInt32(txtJNo.Text), Convert.ToDateTime(dtpDate.Value.ToShortDateString()),
+                txtNote.Text, jType, jPost, Convert.ToDouble(txtNetTotal.Text), Convert.ToDouble(txtNetTotal.Text), 0,
+                userCode, jDate, Program.braCode, Convert.ToInt32(txtOpType.Text));
         }
 
         //funtion to add data into journal body table
@@ -541,7 +560,8 @@ namespace IntegratedAccSys.PL.Purchases
 
             foreach (DataGridViewRow row in dgvData.Rows)
             {
-                if (row.IsNewRow) continue;
+                if (row.IsNewRow)
+                    continue;
 
                 int groupId = Convert.ToInt32(row.Cells["CatNo"].Value);
                 double qty = Convert.ToDouble(row.Cells["Qty"].Value);
@@ -590,9 +610,9 @@ namespace IntegratedAccSys.PL.Purchases
                     continue;
                 }
 
-                int purAccCode = Convert.ToInt32(dt.Rows[0][10]);      // حساب المشتريات
-                int purDiscAccCode = Convert.ToInt32(dt.Rows[0][12]);  // حساب الخصم
-                int purVatAccCode = Convert.ToInt32(dt.Rows[0][14]);   // حساب الضريبة
+                int purAccCode = Convert.ToInt32(dt.Rows[0][10]); // حساب المشتريات
+                int purDiscAccCode = Convert.ToInt32(dt.Rows[0][12]); // حساب الخصم
+                int purVatAccCode = Convert.ToInt32(dt.Rows[0][14]); // حساب الضريبة
                 int inventoryAccCode = Convert.ToInt32(dt.Rows[0][2]); // حساب المخزون
 
 
@@ -628,11 +648,13 @@ namespace IntegratedAccSys.PL.Purchases
             // التحقق من التوازن
             if (Math.Round(totalDebit, 2) != Math.Round(totalCredit, 2))
             {
-                MessageBox.Show($"⚠️ القيد غير متوازن! المدين = {totalDebit}, الدائن = {totalCredit}", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"⚠️ القيد غير متوازن! المدين = {totalDebit}, الدائن = {totalCredit}", "تنبيه",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("✅ تم إضافة القيود بنجاح والقيد متوازن.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("✅ تم إضافة القيود بنجاح والقيد متوازن.", "نجاح", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
 
@@ -645,6 +667,7 @@ namespace IntegratedAccSys.PL.Purchases
                     MessageBox.Show("يجب إختيار الأصناف اولا", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+
                 addOperationHeader();
                 addOperationBody();
                 addProductMovement();
@@ -655,8 +678,8 @@ namespace IntegratedAccSys.PL.Purchases
                     addJournalBody();
                 }
 
-                MessageBox.Show("تمت عملية الحفظ بنجاح", "عملية الحفظ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show("تمت عملية الحفظ بنجاح", "عملية الحفظ", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -666,7 +689,6 @@ namespace IntegratedAccSys.PL.Purchases
 
         void editBillBondHeader()
         {
-
             int Post = 0;
             if (chkPost.Checked)
             {
@@ -676,8 +698,14 @@ namespace IntegratedAccSys.PL.Purchases
             {
                 Post = 0;
             }
+
             int userCode = Convert.ToInt32(cu.getUserNo(Program.userName).Rows[0][0]);
-            ci.editBillBondHeader(Convert.ToInt32(txtNo.Text), Convert.ToDateTime(dtpDate.Value.ToShortTimeString()), Convert.ToInt32(txtOpType.Text), Post, txtNote.Text, 0, 0, Convert.ToInt32(txtSuppCode.Text), userCode, DateTime.Now, Program.braCode, Convert.ToInt32(cbPaymentMethod.SelectedValue), Convert.ToInt32(txtFundCode.Text), Convert.ToDecimal(txtAllTotal.Text), Convert.ToDecimal(txtDiscountTotal.Text), Convert.ToDecimal(txtVATTotal.Text), Convert.ToDecimal(txtNetTotal.Text), Convert.ToInt32(txtJNo.Text), Convert.ToDouble(txtSaleCost.Text));
+            ci.editBillBondHeader(Convert.ToInt32(txtNo.Text), Convert.ToDateTime(dtpDate.Value.ToShortTimeString()),
+                Convert.ToInt32(txtOpType.Text), Post, txtNote.Text, 0, 0, Convert.ToInt32(txtSuppCode.Text), userCode,
+                DateTime.Now, Program.braCode, Convert.ToInt32(cbPaymentMethod.SelectedValue),
+                Convert.ToInt32(txtFundCode.Text), Convert.ToDecimal(txtAllTotal.Text),
+                Convert.ToDecimal(txtDiscountTotal.Text), Convert.ToDecimal(txtVATTotal.Text),
+                Convert.ToDecimal(txtNetTotal.Text), Convert.ToInt32(txtJNo.Text), Convert.ToDouble(txtSaleCost.Text));
         }
 
         void deleteBillBondBody()
@@ -695,7 +723,8 @@ namespace IntegratedAccSys.PL.Purchases
                 DateTime moveDate = Convert.ToDateTime(dtpDate.Value.ToShortDateString());
                 decimal conversionFactor = Convert.ToDecimal(dgvData.Rows[i].Cells[4].Value);
 
-                ci.deleteBillbondbody(No, opTypeNo, proCode, Qty, price, unitID, storeID, catID, moveDate, conversionFactor);
+                ci.deleteBillbondbody(No, opTypeNo, proCode, Qty, price, unitID, storeID, catID, moveDate,
+                    conversionFactor);
             }
         }
 
@@ -712,6 +741,7 @@ namespace IntegratedAccSys.PL.Purchases
                 {
                     cj.delJournalEntry(Convert.ToInt32(txtJNo.Text), Program.braCode);
                 }
+
                 //add data into  Bill or Bond table body
                 addOperationBody();
                 //update Qty in Products Table
@@ -724,8 +754,9 @@ namespace IntegratedAccSys.PL.Purchases
                     addJournalHeader();
                     addJournalBody();
                 }
-                MessageBox.Show("نمت عملية التعديل بنجاح", "عملية تعديل", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                MessageBox.Show("نمت عملية التعديل بنجاح", "عملية تعديل", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -748,7 +779,8 @@ namespace IntegratedAccSys.PL.Purchases
                 DateTime moveDate = Convert.ToDateTime(dtpDate.Value.ToShortDateString());
                 decimal conversionFactor = Convert.ToDecimal(dgvData.Rows[i].Cells[4].Value);
 
-                ci.deleteBillbondHeader(No, opTypeNo, proCode, Qty, price, unitID, storeID, catID, moveDate, conversionFactor);
+                ci.deleteBillbondHeader(No, opTypeNo, proCode, Qty, price, unitID, storeID, catID, moveDate,
+                    conversionFactor);
             }
         }
 
@@ -756,17 +788,18 @@ namespace IntegratedAccSys.PL.Purchases
         {
             try
             {
-                if (MessageBox.Show("هل انت متأكد من أنك تريد حذف الفاتورة او السند", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("هل انت متأكد من أنك تريد حذف الفاتورة او السند", "تنبيه", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     if (Convert.ToInt32(txtOpType.Text) == 5)
                     {
                         cj.delJournalEntry(Convert.ToInt32(txtJNo.Text), Program.braCode);
                     }
+
                     deleteBillBondHeader();
-                    MessageBox.Show("تمت عملية الحذف بنجاح", "عملية الحذف", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("تمت عملية الحذف بنجاح", "عملية الحذف", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
-
             }
             catch (Exception ex)
             {
@@ -794,6 +827,7 @@ namespace IntegratedAccSys.PL.Purchases
                 {
                     chkPost.Checked = false;
                 }
+
                 txtNote.Text = dt.Rows[0][4].ToString();
                 txtSuppCode.Text = dt.Rows[0][5].ToString();
                 txtSuppName.Text = dt.Rows[0][6].ToString();
@@ -819,7 +853,8 @@ namespace IntegratedAccSys.PL.Purchases
             }
             else
             {
-                MessageBox.Show("لا توجد الفاتورة التي تبحث عنها", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("لا توجد الفاتورة التي تبحث عنها", "تنبيه", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
         }
 
@@ -846,16 +881,17 @@ namespace IntegratedAccSys.PL.Purchases
                     dgvData.Rows[i].Cells[2].Value = dt.Rows[j][7].ToString();
                     dgvData.Rows[i].Cells[3].Value = dt.Rows[j][8].ToString();
                     dgvData.Rows[i].Cells[4].Value = dt.Rows[j][15].ToString();
-                    dgvData.Rows[i].Cells[5].Value = dt.Rows[j][9].ToString();//Qty
-                    dgvData.Rows[i].Cells[6].Value = dt.Rows[j][10].ToString();//Price
-                    dgvData.Rows[i].Cells[7].Value = dt.Rows[j][11].ToString();//Discount
-                    dgvData.Rows[i].Cells[8].Value = dt.Rows[j][12].ToString();//VAT
-                    dgvData.Rows[i].Cells[9].Value = Convert.ToDouble(dt.Rows[j][9].ToString()) * Convert.ToDouble(dt.Rows[j][10].ToString());
+                    dgvData.Rows[i].Cells[5].Value = dt.Rows[j][9].ToString(); //Qty
+                    dgvData.Rows[i].Cells[6].Value = dt.Rows[j][10].ToString(); //Price
+                    dgvData.Rows[i].Cells[7].Value = dt.Rows[j][11].ToString(); //Discount
+                    dgvData.Rows[i].Cells[8].Value = dt.Rows[j][12].ToString(); //VAT
+                    dgvData.Rows[i].Cells[9].Value = Convert.ToDouble(dt.Rows[j][9].ToString()) *
+                                                     Convert.ToDouble(dt.Rows[j][10].ToString());
                     dgvData.Rows[i].Cells[10].Value = dt.Rows[j][4].ToString();
                     dgvData.Rows[i].Cells[11].Value = dt.Rows[j][2].ToString();
                     i++;
-
                 }
+
                 Total();
             }
         }
@@ -950,6 +986,7 @@ namespace IntegratedAccSys.PL.Purchases
                 txtSuppName.Visible = false;
                 txtSuppCode.Visible = false;
             }
+
             if (cbPaymentMethod.Text.Trim() == "آجل")
             {
                 lblFund.Visible = false;
@@ -967,15 +1004,17 @@ namespace IntegratedAccSys.PL.Purchases
             int opType = Convert.ToInt32(txtOpType.Text);
             List<ReportDataSource> dataSource = new List<ReportDataSource>
             {
-                new ReportDataSource("dsBranchData",csf.getBranchData(Program.braCode)),
-                new ReportDataSource("dsShowBillBondHeader",ci.showBillBondHeader(Convert.ToInt32(txtNo.Text),opType)),
-                new ReportDataSource("dsShowBillBondBody",ci.showBillBondBody(Convert.ToInt32(txtNo.Text),opType)),
+                new ReportDataSource("dsBranchData", csf.getBranchData(Program.braCode)),
+                new ReportDataSource("dsShowBillBondHeader",
+                    ci.showBillBondHeader(Convert.ToInt32(txtNo.Text), opType)),
+                new ReportDataSource("dsShowBillBondBody", ci.showBillBondBody(Convert.ToInt32(txtNo.Text), opType)),
             };
             string reportTitle = "";
             reportTitle = "فاتورة مرتجع مشتريات";
 
 
-            IntegratedAccSys.Reports.frmReportViewer frv = new IntegratedAccSys.Reports.frmReportViewer("rptBillBond.rdlc", dataSource, reportTitle);
+            IntegratedAccSys.Reports.frmReportViewer frv =
+                new IntegratedAccSys.Reports.frmReportViewer("rptBillBond.rdlc", dataSource, reportTitle);
             frv.ShowDialog();
         }
     }

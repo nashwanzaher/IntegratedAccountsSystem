@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis.VisualBasic.Syntax;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

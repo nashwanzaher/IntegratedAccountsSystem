@@ -577,7 +577,8 @@ namespace IntegratedAccSys.PL.Sales
 
             foreach (DataGridViewRow row in dgvData.Rows)
             {
-                if (row.IsNewRow) continue;
+                if (row.IsNewRow)
+                    continue;
 
                 int groupId = Convert.ToInt32(row.Cells["CatNo"].Value);
                 double qty = Convert.ToDouble(row.Cells["Qty"].Value);
