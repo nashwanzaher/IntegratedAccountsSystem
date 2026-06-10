@@ -239,27 +239,27 @@ namespace IntegratedAccSys.PL.Users
 
         private void txtFullName_Enter(object sender, EventArgs e)
         {
-            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("ar-ye"));
+            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("ar-ye"))!;
         }
 
         private void txtID_Enter(object sender, EventArgs e)
         {
-            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"));
+            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"))!;
         }
 
         private void txtPWD_Enter(object sender, EventArgs e)
         {
-            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"));
+            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"))!;
         }
 
         private void txtMobile_Enter(object sender, EventArgs e)
         {
-            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"));
+            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"))!;
         }
 
         private void txtUserEmail_Enter(object sender, EventArgs e)
         {
-            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"));
+            Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("en-us"))!;
         }
 
         private void frmUsers_Load(object sender, EventArgs e)
