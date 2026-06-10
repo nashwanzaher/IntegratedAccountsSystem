@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using Npgsql;
-using NpgsqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IntegratedAccSys.BL.Security;
+using Npgsql;
+using NpgsqlTypes;
 
 namespace IntegratedAccSys.BL.Users
 {
