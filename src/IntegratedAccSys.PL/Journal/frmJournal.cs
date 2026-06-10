@@ -279,7 +279,7 @@ namespace IntegratedAccSys.PL.Journal
                     double currVal = Convert.ToDouble(dgvData.Rows[i].Cells[6].Value);
                     double accDebitor = Convert.ToDouble(dgvData.Rows[i].Cells[2].Value);
                     double accCreditor = Convert.ToDouble(dgvData.Rows[i].Cells[3].Value);
-                    string accNote = dgvData.Rows[i].Cells[7].Value.ToString();
+                    string accNote = dgvData.Rows[i].Cells[7].Value?.ToString() ?? string.Empty;
                     int jNo = Convert.ToInt32(dgvData.Rows[i].Cells[10].Value);
                     cj.addJournalBody(accCode, currID, currVal, accDebitor, accCreditor, accNote, jNo);
                 }
@@ -323,7 +323,7 @@ namespace IntegratedAccSys.PL.Journal
                     double currVal = Convert.ToDouble(dgvData.Rows[i].Cells[6].Value);
                     double accDebitor = Convert.ToDouble(dgvData.Rows[i].Cells[3].Value);
                     double accCreditor = Convert.ToDouble(dgvData.Rows[i].Cells[2].Value);
-                    string accNote = dgvData.Rows[i].Cells[7].Value.ToString();
+                    string accNote = dgvData.Rows[i].Cells[7].Value?.ToString() ?? string.Empty;
 
                     cj.addJournalBody(accCode, currID, currVal, accDebitor, accCreditor, accNote, jNo);
                 }
