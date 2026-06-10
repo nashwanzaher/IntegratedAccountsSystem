@@ -1,8 +1,8 @@
 using System;
 using System.Data;
+using System.Text;
 using Npgsql;
 using NpgsqlTypes;
-using System.Text;
 
 namespace IntegratedAccSys.DAL
 {
