@@ -146,7 +146,7 @@ namespace IntegratedAccSys.PL.Users
                     cu.editPrivilege(targetUserCode, windowID, new_, add, edit, del, print, display, Program.braCode);
 
                     // Log privilege change for this window
-                    string targetUserID = cu.getUserNo(targetUserCode.ToString()).Rows[0]["userID"].ToString();
+                    string targetUserID = cu.getUserNo(targetUserCode.ToString()).Rows[0]["userID"]?.ToString() ?? string.Empty;
                     IntegratedAccSys.BL.Security.AuditHelper.LogPrivilegeUpdated(
                         currentUserCode, targetUserID, Program.braCode, windowID);
                 }
