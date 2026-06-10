@@ -1,1 +1,0 @@
-DO $$ BEGIN INSERT INTO tblbondheader (bondid, bondtype, bonddate, fiscalyear, fiscalperiod, amount) SELECT 'BENCH-TEST-' || gs, 'SALE', CURRENT_DATE, 2026, 1, (gs * 100)::numeric FROM generate_series(1, 100) AS gs ON CONFLICT (bondid) DO NOTHING; END $$; SELECT COUNT(*) FROM tblbondheader WHERE bondid LIKE 'BENCH-TEST-%';
