@@ -25,7 +25,7 @@ namespace IntegratedAccSys.PL.Journal
 
 
         // ADD HEADER CHECH BOX
-        CheckBox HeaderCheckBox = null;
+        CheckBox? HeaderCheckBox = null;
         public frmPostingUnPosting()
         {
             InitializeComponent();
@@ -106,22 +106,25 @@ namespace IntegratedAccSys.PL.Journal
         }
 
         //HEADER CHECHBOX EVENT CLICK
-        private void HeaderCheckBoxClick(CheckBox HCheckBox)
+        private void HeaderCheckBoxClick(CheckBox? HCheckBox)
         {
 
             IsHeaderCheckBoxClicked = true;
-            foreach (DataGridViewRow Row in dgvData.Rows)
+            if (HCheckBox != null)
             {
-                ((DataGridViewCheckBoxCell)Row.Cells[0]).Value = HCheckBox.Checked;
+                foreach (DataGridViewRow Row in dgvData.Rows)
+                {
+                    ((DataGridViewCheckBoxCell)Row.Cells[0]).Value = HCheckBox.Checked;
+                }
             }
             dgvData.RefreshEdit();
 
             IsHeaderCheckBoxClicked = false;
         }
         // MOUSECLICK EVENT
-        private void HeaderCheckBox_MouseClick(Object Sender, MouseEventArgs e)
+        private void HeaderCheckBox_MouseClick(Object? Sender, MouseEventArgs e)
         {
-            HeaderCheckBoxClick((CheckBox)Sender);
+            HeaderCheckBoxClick(Sender as CheckBox);
         }
 
         private void frmPostingUnPosting_Load(object sender, EventArgs e)
@@ -129,13 +132,17 @@ namespace IntegratedAccSys.PL.Journal
             dtpRptFromDate.Value = DateTime.Today;
             dtpRptToDate.Value = DateTime.Today;
             AddHeaderCheckBox();
-            HeaderCheckBox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);
+            if (HeaderCheckBox != null)
+            {
+                HeaderCheckBox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);
+            }
         }
 
 
         void FillDgvData()
         {
             int i = 0;
+            if (dt == null) return;
 
             dgvData.RowCount = dt.Rows.Count;
             if (dt.Rows.Count > 0)
