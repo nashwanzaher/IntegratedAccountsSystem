@@ -95,7 +95,11 @@ namespace IntegratedAccSys.Reports
             {
                 if (currentPage < pages.Count)
                 {
-                    e.Graphics.DrawImage(pages[currentPage], e.PageBounds);
+                    var page = pages[currentPage];
+                    if (page != null && e.Graphics != null)
+                    {
+                        e.Graphics.DrawImage(page, e.PageBounds);
+                    }
                     currentPage++;
                     e.HasMorePages = (currentPage < pages.Count);
                 }
