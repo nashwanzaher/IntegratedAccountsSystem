@@ -1,8 +1,8 @@
 using System;
 using System.Data;
+using IntegratedAccSys.DAL;
 using Npgsql;
 using NpgsqlTypes;
-using IntegratedAccSys.DAL;
 
 namespace IntegratedAccSys.DAL.DbTest
 {
@@ -46,15 +46,15 @@ namespace IntegratedAccSys.DAL.DbTest
                 // 2. MASTER DATA
                 Console.WriteLine();
                 Console.WriteLine("[MASTER DATA]");
-                RunNoParams(ctx, "getAllBranches",   ref passed, ref failed);
+                RunNoParams(ctx, "getAllBranches", ref passed, ref failed);
                 RunNoParams(ctx, "getAllCurrencies", ref passed, ref failed);
-                RunNoParams(ctx, "getAllAccTypes",   ref passed, ref failed);
-                RunNoParams(ctx, "getAllStores",     ref passed, ref failed);
-                RunNoParams(ctx, "getAllProducts",   ref passed, ref failed);
-                RunNoParams(ctx, "getAllUnits",      ref passed, ref failed);
+                RunNoParams(ctx, "getAllAccTypes", ref passed, ref failed);
+                RunNoParams(ctx, "getAllStores", ref passed, ref failed);
+                RunNoParams(ctx, "getAllProducts", ref passed, ref failed);
+                RunNoParams(ctx, "getAllUnits", ref passed, ref failed);
                 RunWithParams(ctx, "getListOfAccounts", () => MkParams("@p_bracode", 1), ref passed, ref failed);
-                RunWithParams(ctx, "getAllCustomers",   () => MkParams("@p_bracode", 1), ref passed, ref failed);
-                RunWithParams(ctx, "getAllSuppliers",   () => MkParams("@p_bracode", 1), ref passed, ref failed);
+                RunWithParams(ctx, "getAllCustomers", () => MkParams("@p_bracode", 1), ref passed, ref failed);
+                RunWithParams(ctx, "getAllSuppliers", () => MkParams("@p_bracode", 1), ref passed, ref failed);
 
                 ctx.BeginTransaction();
                 ctx.RollbackTransaction();
@@ -66,10 +66,10 @@ namespace IntegratedAccSys.DAL.DbTest
                 Console.WriteLine("[PHASE 4: COST CENTERS & DIMENSIONS]");
 
                 // 3. DIMENSION MASTER READS
-                RunNoParams(ctx, "getAllDepartments",   ref passed, ref failed);
-                RunNoParams(ctx, "getAllProjects",      ref passed, ref failed);
+                RunNoParams(ctx, "getAllDepartments", ref passed, ref failed);
+                RunNoParams(ctx, "getAllProjects", ref passed, ref failed);
                 RunNoParams(ctx, "getAllBusinessUnits", ref passed, ref failed);
-                RunNoParams(ctx, "getAllSegments",      ref passed, ref failed);
+                RunNoParams(ctx, "getAllSegments", ref passed, ref failed);
                 RunNoParams(ctx, "getAllProfitCenters", ref passed, ref failed);
 
                 // 4. CROSS-DIMENSION ANALYTICS (functions)
@@ -88,7 +88,8 @@ namespace IntegratedAccSys.DAL.DbTest
                 int deptCode = TestDimensionCrud(ctx,
                     "addDepartment", "updateDepartment", "deleteDepartment", "getDepartmentData",
                     "D-TEST", "قسم اختبار", "Test Dept", ref passed, ref failed);
-                if (deptCode > 0) passed++; // count the CRUD sequence as one extra pass
+                if (deptCode > 0)
+                    passed++; // count the CRUD sequence as one extra pass
 
                 // 6. CRUD ROUNDTRIP — Projects
                 Console.WriteLine();
@@ -96,7 +97,8 @@ namespace IntegratedAccSys.DAL.DbTest
                 int projCode = TestDimensionCrud(ctx,
                     "addProject", "updateProject", "deleteProject", "getProjectData",
                     "P-TEST", "مشروع اختبار", "Test Project", ref passed, ref failed);
-                if (projCode > 0) passed++;
+                if (projCode > 0)
+                    passed++;
 
                 // 7. CRUD ROUNDTRIP — Business Units
                 Console.WriteLine();
@@ -104,7 +106,8 @@ namespace IntegratedAccSys.DAL.DbTest
                 int buCode = TestDimensionCrud(ctx,
                     "addBusinessUnit", "updateBusinessUnit", "deleteBusinessUnit", "getBusinessUnitData",
                     "BU-TEST", "وحدة اختبار", "Test BU", ref passed, ref failed);
-                if (buCode > 0) passed++;
+                if (buCode > 0)
+                    passed++;
 
                 // 8. CRUD ROUNDTRIP — Segments
                 Console.WriteLine();
@@ -112,7 +115,8 @@ namespace IntegratedAccSys.DAL.DbTest
                 int segCode = TestDimensionCrud(ctx,
                     "addSegment", "updateSegment", "deleteSegment", "getSegmentData",
                     "S-TEST", "قطاع اختبار", "Test Segment", ref passed, ref failed);
-                if (segCode > 0) passed++;
+                if (segCode > 0)
+                    passed++;
 
                 // 9. CRUD ROUNDTRIP — Profit Centers
                 Console.WriteLine();
@@ -120,7 +124,8 @@ namespace IntegratedAccSys.DAL.DbTest
                 int pcCode = TestDimensionCrud(ctx,
                     "addProfitCenter", "updateProfitCenter", "deleteProfitCenter", "getProfitCenterData",
                     "PC-TEST", "مركز ربح اختبار", "Test PC", ref passed, ref failed);
-                if (pcCode > 0) passed++;
+                if (pcCode > 0)
+                    passed++;
 
                 // 10. DIMENSION HIERARCHY
                 Console.WriteLine();
@@ -133,20 +138,21 @@ namespace IntegratedAccSys.DAL.DbTest
                         para[0] = new NpgsqlParameter("p_hierarchytype", NpgsqlDbType.Varchar) { Value = "PROJECT_TO_DEPARTMENT" };
                         para[1] = new NpgsqlParameter("p_parentdimtype", NpgsqlDbType.Varchar) { Value = "DEPARTMENT" };
                         para[2] = new NpgsqlParameter("p_parentdimcode", NpgsqlDbType.Integer) { Value = deptCode };
-                        para[3] = new NpgsqlParameter("p_childdimtype",  NpgsqlDbType.Varchar) { Value = "PROJECT" };
-                        para[4] = new NpgsqlParameter("p_childdimcode",  NpgsqlDbType.Integer) { Value = projCode };
-                        para[5] = new NpgsqlParameter("p_validfrom",     NpgsqlDbType.Date)    { Value = DateTime.Today };
-                        para[6] = new NpgsqlParameter("p_validto",       NpgsqlDbType.Date)    { Value = DBNull.Value };
-                        para[7] = new NpgsqlParameter("p_isactive",      NpgsqlDbType.Boolean) { Value = true };
-                        para[8] = new NpgsqlParameter("p_notes",         NpgsqlDbType.Text)    { Value = "Phase 4 test hierarchy" };
-                        para[9] = new NpgsqlParameter("p_adduser",       NpgsqlDbType.Integer) { Value = DBNull.Value };
+                        para[3] = new NpgsqlParameter("p_childdimtype", NpgsqlDbType.Varchar) { Value = "PROJECT" };
+                        para[4] = new NpgsqlParameter("p_childdimcode", NpgsqlDbType.Integer) { Value = projCode };
+                        para[5] = new NpgsqlParameter("p_validfrom", NpgsqlDbType.Date) { Value = DateTime.Today };
+                        para[6] = new NpgsqlParameter("p_validto", NpgsqlDbType.Date) { Value = DBNull.Value };
+                        para[7] = new NpgsqlParameter("p_isactive", NpgsqlDbType.Boolean) { Value = true };
+                        para[8] = new NpgsqlParameter("p_notes", NpgsqlDbType.Text) { Value = "Phase 4 test hierarchy" };
+                        para[9] = new NpgsqlParameter("p_adduser", NpgsqlDbType.Integer) { Value = DBNull.Value };
                         var dt = ctx.SelectData("addDimensionHierarchy", para);
                         if (dt.Rows.Count > 0)
                         {
                             Console.WriteLine($"[OK]  addDimensionHierarchy  : returned id={dt.Rows[0][0]}");
                             passed++;
                         }
-                        else { Console.WriteLine("[FAIL] addDimensionHierarchy : no row returned"); failed++; }
+                        else
+                        { Console.WriteLine("[FAIL] addDimensionHierarchy : no row returned"); failed++; }
                     }
                     catch (Exception ex)
                     {
@@ -233,15 +239,16 @@ namespace IntegratedAccSys.DAL.DbTest
             {
                 // ADD
                 var addPara = new NpgsqlParameter[3];
-                addPara[0] = new NpgsqlParameter("p_departmentid",   NpgsqlDbType.Varchar) { Value = uniqueId };
-                addPara[1] = new NpgsqlParameter("p_namear",         NpgsqlDbType.Varchar) { Value = nameAr };
-                addPara[2] = new NpgsqlParameter("p_nameen",         NpgsqlDbType.Varchar) { Value = nameEn };
+                addPara[0] = new NpgsqlParameter("p_departmentid", NpgsqlDbType.Varchar) { Value = uniqueId };
+                addPara[1] = new NpgsqlParameter("p_namear", NpgsqlDbType.Varchar) { Value = nameAr };
+                addPara[2] = new NpgsqlParameter("p_nameen", NpgsqlDbType.Varchar) { Value = nameEn };
                 // addDepartment has 10 params; for the generic test we pass only the
                 // required ones and let the rest default. We use the actual fn names
                 // so the Npgsql fallback dispatches correctly.
                 var addParaFull = BuildFullAddParams(addFn, uniqueId, nameAr, nameEn);
                 var dtAdd = ctx.SelectData(addFn, addParaFull);
-                if (dtAdd.Rows.Count == 0) { Console.WriteLine($"[FAIL] {addFn} : no row returned"); failed++; return 0; }
+                if (dtAdd.Rows.Count == 0)
+                { Console.WriteLine($"[FAIL] {addFn} : no row returned"); failed++; return 0; }
                 newCode = Convert.ToInt32(dtAdd.Rows[0][0]);
                 Console.WriteLine($"[OK]  {addFn,-32} : code={newCode}");
                 passed++;
@@ -303,11 +310,16 @@ namespace IntegratedAccSys.DAL.DbTest
 
         static string GetCodeColumn(string addFn)
         {
-            if (addFn.Contains("Department"))   return "departmentcode";
-            if (addFn.Contains("Project"))      return "projectcode";
-            if (addFn.Contains("BusinessUnit")) return "businessunitcode";
-            if (addFn.Contains("Segment"))      return "segmentcode";
-            if (addFn.Contains("ProfitCenter")) return "profitcentercode";
+            if (addFn.Contains("Department"))
+                return "departmentcode";
+            if (addFn.Contains("Project"))
+                return "projectcode";
+            if (addFn.Contains("BusinessUnit"))
+                return "businessunitcode";
+            if (addFn.Contains("Segment"))
+                return "segmentcode";
+            if (addFn.Contains("ProfitCenter"))
+                return "profitcentercode";
             return "code";
         }
 
