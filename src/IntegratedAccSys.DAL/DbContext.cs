@@ -61,7 +61,8 @@ namespace IntegratedAccSys.DAL
             {
                 for (int i = 0; i < para.Length; i++)
                 {
-                    if (i > 0) sb.Append(", ");
+                    if (i > 0)
+                        sb.Append(", ");
                     sb.Append('@');
                     sb.Append(para[i].ParameterName.TrimStart('@'));
                 }
@@ -76,7 +77,8 @@ namespace IntegratedAccSys.DAL
         /// </summary>
         private static NpgsqlParameter[] CloneParameters(NpgsqlParameter[]? src)
         {
-            if (src == null) return Array.Empty<NpgsqlParameter>();
+            if (src == null)
+                return Array.Empty<NpgsqlParameter>();
             var dest = new NpgsqlParameter[src.Length];
             for (int i = 0; i < src.Length; i++)
             {
@@ -104,7 +106,8 @@ namespace IntegratedAccSys.DAL
                     {
                         CommandType = CommandType.StoredProcedure
                     };
-                    if (parameters != null) cmd.Parameters.AddRange(CloneParameters(parameters));
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(CloneParameters(parameters));
                     using var adapter = new NpgsqlDataAdapter(cmd);
                     var dt = new DataTable();
                     adapter.Fill(dt);
@@ -121,7 +124,8 @@ namespace IntegratedAccSys.DAL
                         CommandType = CommandType.Text,
                         CommandText = BuildFunctionCall(sp, parameters)
                     };
-                    if (parameters != null) cmd.Parameters.AddRange(CloneParameters(parameters));
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(CloneParameters(parameters));
                     using var adapter = new NpgsqlDataAdapter(cmd);
                     var dt = new DataTable();
                     adapter.Fill(dt);
@@ -145,7 +149,8 @@ namespace IntegratedAccSys.DAL
                     {
                         CommandType = CommandType.StoredProcedure
                     };
-                    if (parameters != null) cmd.Parameters.AddRange(CloneParameters(parameters));
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(CloneParameters(parameters));
                     return cmd.ExecuteNonQuery();
                 }
                 catch (Exception procEx) when (procEx.Message.Contains("does not exist", StringComparison.OrdinalIgnoreCase)
@@ -158,7 +163,8 @@ namespace IntegratedAccSys.DAL
                         CommandType = CommandType.Text,
                         CommandText = BuildFunctionCall(sp, parameters)
                     };
-                    if (parameters != null) cmd.Parameters.AddRange(CloneParameters(parameters));
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(CloneParameters(parameters));
                     return cmd.ExecuteNonQuery();
                 }
             }
@@ -179,7 +185,8 @@ namespace IntegratedAccSys.DAL
                     {
                         CommandType = CommandType.StoredProcedure
                     };
-                    if (parameters != null) cmd.Parameters.AddRange(CloneParameters(parameters));
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(CloneParameters(parameters));
                     return cmd.ExecuteScalar();
                 }
                 catch (Exception procEx) when (procEx.Message.Contains("does not exist", StringComparison.OrdinalIgnoreCase)
@@ -192,7 +199,8 @@ namespace IntegratedAccSys.DAL
                         CommandType = CommandType.Text,
                         CommandText = BuildFunctionCall(sp, parameters)
                     };
-                    if (parameters != null) cmd.Parameters.AddRange(CloneParameters(parameters));
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(CloneParameters(parameters));
                     return cmd.ExecuteScalar();
                 }
             }
@@ -237,7 +245,8 @@ namespace IntegratedAccSys.DAL
 
         public void Dispose()
         {
-            if (_disposed) return;
+            if (_disposed)
+                return;
             _transaction?.Dispose();
             _connection?.Dispose();
             _disposed = true;

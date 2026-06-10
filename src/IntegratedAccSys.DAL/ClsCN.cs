@@ -55,7 +55,7 @@ namespace IntegratedAccSys.DAL
                 {
                     'f' => 'f',
                     'p' => 'p',
-                    _   => '?'
+                    _ => '?'
                 };
                 _objectKindCache.TryAdd(name, kind);
                 return kind;
@@ -117,7 +117,8 @@ namespace IntegratedAccSys.DAL
             {
                 for (int i = 0; i < para.Length; i++)
                 {
-                    if (i > 0) sb.Append(", ");
+                    if (i > 0)
+                        sb.Append(", ");
                     sb.Append('@');
                     sb.Append(para[i].ParameterName.TrimStart('@'));
                 }
@@ -128,7 +129,8 @@ namespace IntegratedAccSys.DAL
 
         private static NpgsqlParameter[] CloneParameters(NpgsqlParameter[]? src)
         {
-            if (src == null) return Array.Empty<NpgsqlParameter>();
+            if (src == null)
+                return Array.Empty<NpgsqlParameter>();
             var dest = new NpgsqlParameter[src.Length];
             for (int i = 0; i < src.Length; i++)
             {
@@ -158,7 +160,8 @@ namespace IntegratedAccSys.DAL
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = BuildFunctionCall(sp, para);
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
 
                         using (NpgsqlDataAdapter sda = new NpgsqlDataAdapter(cmd))
                         {
@@ -174,7 +177,8 @@ namespace IntegratedAccSys.DAL
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sp, _conn!))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
 
                         using (NpgsqlDataAdapter sda = new NpgsqlDataAdapter(cmd))
                         {
@@ -191,7 +195,8 @@ namespace IntegratedAccSys.DAL
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sp, _conn!))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
 
                         using (NpgsqlDataAdapter sda = new NpgsqlDataAdapter(cmd))
                         {
@@ -212,7 +217,8 @@ namespace IntegratedAccSys.DAL
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = BuildFunctionCall(sp, para);
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
 
                         using (NpgsqlDataAdapter sda = new NpgsqlDataAdapter(cmd))
                         {
@@ -244,7 +250,8 @@ namespace IntegratedAccSys.DAL
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = BuildFunctionCall(sp, para);
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
                         cmd.ExecuteNonQuery();
                         return;
                     }
@@ -254,7 +261,8 @@ namespace IntegratedAccSys.DAL
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sp, _conn!))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
                         cmd.ExecuteNonQuery();
                         return;
                     }
@@ -266,7 +274,8 @@ namespace IntegratedAccSys.DAL
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sp, _conn!))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
                         cmd.ExecuteNonQuery();
                         _objectKindCache.TryAdd(sp, 'p');
                         return;
@@ -281,7 +290,8 @@ namespace IntegratedAccSys.DAL
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = BuildFunctionCall(sp, para);
-                        if (para != null) cmd.Parameters.AddRange(CloneParameters(para));
+                        if (para != null)
+                            cmd.Parameters.AddRange(CloneParameters(para));
                         cmd.ExecuteNonQuery();
                         _objectKindCache.TryAdd(sp, 'f');
                     }
