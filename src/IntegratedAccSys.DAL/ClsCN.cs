@@ -1,11 +1,11 @@
 using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Data;
-using Npgsql;
-using NpgsqlTypes;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
-using System.Collections.Concurrent;
+using Npgsql;
+using NpgsqlTypes;
 
 namespace IntegratedAccSys.DAL
 {

@@ -43,7 +43,8 @@ namespace IntegratedAccSys.DAL.Security
         /// </summary>
         public static void ApplyKey(NpgsqlConnection connection)
         {
-            if (connection is null) throw new ArgumentNullException(nameof(connection));
+            if (connection is null)
+                throw new ArgumentNullException(nameof(connection));
             if (connection.State != System.Data.ConnectionState.Open)
                 throw new InvalidOperationException("Connection must be open before ApplyKey().");
 
@@ -82,14 +83,17 @@ namespace IntegratedAccSys.DAL.Security
         /// </summary>
         public static byte[]? Encrypt(NpgsqlConnection connection, string plaintext)
         {
-            if (plaintext is null) return null;
-            if (connection is null) throw new ArgumentNullException(nameof(connection));
+            if (plaintext is null)
+                return null;
+            if (connection is null)
+                throw new ArgumentNullException(nameof(connection));
 
             using (var cmd = new NpgsqlCommand("SELECT fn_pii_encrypt(@s)", connection))
             {
                 cmd.Parameters.AddWithValue("@s", plaintext);
                 var raw = cmd.ExecuteScalar();
-                if (raw is null or DBNull) return null;
+                if (raw is null or DBNull)
+                    return null;
                 return (byte[])raw;
             }
         }
@@ -101,14 +105,17 @@ namespace IntegratedAccSys.DAL.Security
         /// </summary>
         public static string? Decrypt(NpgsqlConnection connection, byte[] ciphertext)
         {
-            if (ciphertext is null) return null;
-            if (connection is null) throw new ArgumentNullException(nameof(connection));
+            if (ciphertext is null)
+                return null;
+            if (connection is null)
+                throw new ArgumentNullException(nameof(connection));
 
             using (var cmd = new NpgsqlCommand("SELECT fn_pii_decrypt(@b)", connection))
             {
                 cmd.Parameters.AddWithValue("@b", ciphertext);
                 var raw = cmd.ExecuteScalar();
-                if (raw is null or DBNull) return null;
+                if (raw is null or DBNull)
+                    return null;
                 return (string)raw;
             }
         }
@@ -116,12 +123,14 @@ namespace IntegratedAccSys.DAL.Security
         private static string? ResolveKey()
         {
             string? fromEnv = Environment.GetEnvironmentVariable(KeyEnvVar);
-            if (!string.IsNullOrEmpty(fromEnv)) return fromEnv;
+            if (!string.IsNullOrEmpty(fromEnv))
+                return fromEnv;
 
             try
             {
                 string? fromConfig = ConfigurationManager.AppSettings[KeyAppSetting];
-                if (!string.IsNullOrEmpty(fromConfig)) return fromConfig;
+                if (!string.IsNullOrEmpty(fromConfig))
+                    return fromConfig;
             }
             catch
             {

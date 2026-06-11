@@ -1,4 +1,3 @@
-using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using IntegratedAccSys.BL.Security;
 using IntegratedAccSys.PL.Security;
+using Microsoft.Reporting.WinForms;
 
 namespace IntegratedAccSys.PL.Accounts
 {

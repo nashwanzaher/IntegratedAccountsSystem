@@ -1,8 +1,8 @@
 using System;
 using System.Data;
+using IntegratedAccSys.BL.Users;
 using Npgsql;
 using NpgsqlTypes;
-using IntegratedAccSys.BL.Users;
 
 namespace IntegratedAccSys.BL.Security
 {
