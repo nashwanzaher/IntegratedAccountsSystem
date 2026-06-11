@@ -2,8 +2,8 @@
 
 > System architecture documentation organized by **3-tier layering** (PL / BL / DAL) plus the PostgreSQL database layer.
 
-**Current Version:** v2.0.0 (PostgreSQL 17)  
-**Date:** 2026-06-08  
+**Current Version:** v2.0.0 (PostgreSQL 17)
+**Date:** 2026-06-08
 **Framework:** .NET 8 WinForms | 3-Tier Architecture (PL → BL → DAL → DB)
 
 ---
@@ -49,8 +49,8 @@ The codebase is split into four logical layers, each documented separately below
 
 ## §1 — Presentation Layer (PL)
 
-**Location:** `D:\source\IntegratedAccountsSystem\PL\`  
-**Forms:** 28 active (across 9 sub-folders)  
+**Location:** `D:\source\IntegratedAccountsSystem\PL\`
+**Forms:** 28 active (across 9 sub-folders)
 **Zero direct DB access.** Every form calls BL classes only.
 
 | Sub-folder | Forms | Purpose |
@@ -65,15 +65,15 @@ The codebase is split into four logical layers, each documented separately below
 | `PL/Users/` | 3 | Login, privileges, user management |
 | `PL/Reports/` | 1 | RDLC report viewer (frmReportViewer) |
 
-**Key pattern:** `grep "using System.Data.SqlClient" PL/**/*.cs` → **0 matches**.  
+**Key pattern:** `grep "using System.Data.SqlClient" PL/**/*.cs` → **0 matches**.
 Migration to PostgreSQL needed **zero PL changes** — see `audits/PL_Migration_Report.md`.
 
 ---
 
 ## §2 — Business Layer (BL)
 
-**Location:** `D:\source\IntegratedAccountsSystem\BL\`  
-**Files:** 13 main + 4 helpers (`AuditHelper`, `PasswordHelper`, etc.)  
+**Location:** `D:\source\IntegratedAccountsSystem\BL\`
+**Files:** 13 main + 4 helpers (`AuditHelper`, `PasswordHelper`, etc.)
 **Parameter binding:** All `NpgsqlParameter[]` (migrated from `SqlParameter[]` — 606 replacements).
 
 | Folder | File | Purpose |
@@ -94,7 +94,7 @@ Migration to PostgreSQL needed **zero PL changes** — see `audits/PL_Migration_
 
 ## §3 — Data Access Layer (DAL)
 
-**Location:** `D:\source\IntegratedAccountsSystem\DAL\`  
+**Location:** `D:\source\IntegratedAccountsSystem\DAL\`
 **Files:** 3 (legacy + modern paths consolidated)
 
 | File | Purpose |
@@ -103,15 +103,15 @@ Migration to PostgreSQL needed **zero PL changes** — see `audits/PL_Migration_
 | `DAL/DbContext.cs` | Explicit transactions (`BeginTransaction/Commit/Rollback`) — modern path |
 | `DAL/DbContextProvider.cs` | Thread-safe singleton context provider |
 
-**Key pattern:** Npgsql 8.0.4 is the only DB provider. Connection pooling is Npgsql default.  
+**Key pattern:** Npgsql 8.0.4 is the only DB provider. Connection pooling is Npgsql default.
 **Known issue (from `audits/ARCH_AUDIT.md` §1.4):** two parallel DAL paths (`clsCN` + `DbContext`) should be consolidated in a future refactor.
 
 ---
 
 ## §4 — Database (PostgreSQL 17)
 
-**Location:** `D:\source\IntegratedAccountsSystem\Database\`  
-**Engine:** PostgreSQL 17 @ `localhost:5432`  
+**Location:** `D:\source\IntegratedAccountsSystem\Database\`
+**Engine:** PostgreSQL 17 @ `localhost:5432`
 **Database:** `IntegratedAccSys`
 
 | Schema file | Size | Purpose |

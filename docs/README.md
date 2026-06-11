@@ -1,7 +1,7 @@
 # 📊 نظام المحاسبة المتكامل | Integrated Accounting System
 
-> **Current Version:** v2.0.0 (PostgreSQL 17)  
-> **Updated:** 2026-06-08  
+> **Current Version:** v2.0.0 (PostgreSQL 17)
+> **Updated:** 2026-06-08
 > **Previous:** v1.x (SQL Server 2019)
 
 نظام محاسبي متكامل يدعم الحسابات، المخازن، المشتريات، المبيعات، صلاحيات المستخدم، وإعدادات النظام. مصمم للعمل في بيئة حديثة باستخدام:
