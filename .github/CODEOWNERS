@@ -1,0 +1,35 @@
+# CODEOWNERS — automatically requested for review
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for the whole repo (replace with the actual team/handle)
+/*                @nashwanzaher
+
+# Per-area ownership
+/src/IntegratedAccSys.DAL/        @nashwanzaher
+/src/IntegratedAccSys.BL/         @nashwanzaher
+/src/IntegratedAccSys.PL/         @nashwanzaher
+/tests/                            @nashwanzaher
+/database/                         @nashwanzaher
+/database/migrations/              @nashwanzaher
+/scripts/                         @nashwanzaher
+/scripts/audit-g*.ps1              @nashwanzaher
+/docs/                            @nashwanzaher
+/docs/CONVENTIONS.md               @nashwanzaher
+/docs/architecture/                @nashwanzaher
+/docs/audits/                      @nashwanzaher
+/.github/                          @nashwanzaher
+/.editorconfig                     @nashwanzaher
+/.gitignore                        @nashwanzaher
+/IntegratedAccSys.sln              @nashwanzaher
+
+# Sub-namespace ownership
+/src/IntegratedAccSys.BL/Accounts/   @nashwanzaher
+/src/IntegratedAccSys.BL/Bonds/      @nashwanzaher
+/src/IntegratedAccSys.BL/Journal/    @nashwanzaher
+/src/IntegratedAccSys.BL/Purchases/  @nashwanzaher
+/src/IntegratedAccSys.BL/Sales/      @nashwanzaher
+/src/IntegratedAccSys.BL/Stores/     @nashwanzaher
+/src/IntegratedAccSys.BL/SysFormat/  @nashwanzaher
+/src/IntegratedAccSys.BL/Users/      @nashwanzaher
+/src/IntegratedAccSys.BL/Security/   @nashwanzaher
+/src/IntegratedAccSys.BL/Dimensions/ @nashwanzaher

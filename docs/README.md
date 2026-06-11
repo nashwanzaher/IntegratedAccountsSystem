@@ -86,12 +86,12 @@ psql -h localhost -p 5432 -U postgres -d IntegratedAccSys -f Database/Integrated
 
 ```bash
 # Restore from backup (if you have data)
-pg_restore -h localhost -p 5432 -U postgres -d IntegratedAccSys -c Database/IntegratedAccSys.bak
+pg_restore -h localhost -p 5432 -U postgres -d IntegratedAccSys -c database/IntegratedAccSys.bak
 
 # Or create fresh from SQL files:
 psql -h localhost -p 5432 -U postgres -d postgres -c "CREATE DATABASE IntegratedAccSys;"
-psql -h localhost -p 5432 -U postgres -d IntegratedAccSys -f Database/IntegratedAccSys_PostgreSQL.sql
-psql -h localhost -p 5432 -U postgres -d IntegratedAccSys -f Database/IntegratedAccSys_PostgreSQL_Logic.sql
+psql -h localhost -p 5432 -U postgres -d IntegratedAccSys -f database/IntegratedAccSys_PostgreSQL.sql
+psql -h localhost -p 5432 -U postgres -d IntegratedAccSys -f database/IntegratedAccSys_PostgreSQL_Logic.sql
 ```
 
 ### 2. Configure Connection
@@ -149,7 +149,7 @@ IntegratedAccountsSystem/
 ├── BL/              # Business Logic Layer — 13 files
 ├── DAL/             # Data Access Layer (Npgsql) — 3 files
 ├── Reports/         # RDLC report definitions (9 .rdlc)
-├── Database/        # PostgreSQL schema files
+├── database/        # PostgreSQL schema files (lowercase canonical)
 │   ├── README.md
 │   ├── setup.sql                          # Quickstart CREATE DATABASE
 │   ├── IntegratedAccSys_PostgreSQL.sql    # Tables + Constraints
@@ -247,8 +247,8 @@ See **[`audits/README.md`](audits/README.md)** for full index.
 |---|---|
 | `presentation/` | Bilingual HTML slides (12 slides) |
 | `slides/` | Pre-rendered slide PNG images |
-| `../Database/README.md` | Database setup guide |
-| `../Database/verify_coverage.ps1` | 118/118 BL↔DB signature verifier |
+| `../database/README.md` | Database setup guide |
+| `../database/verify_coverage.ps1` | 118/118 BL↔DB signature verifier |
 
 ---
 

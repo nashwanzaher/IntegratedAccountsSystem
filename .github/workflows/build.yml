@@ -1,0 +1,58 @@
+name: build
+
+on:
+  push:
+    branches: [main, zaher-main, feat/**, fix/**, refactor/**, docs/**, audit/**, chore/**]
+  pull_request:
+    branches: [main, zaher-main]
+
+env:
+  DOTNET_VERSION: "8.0.x"
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+
+jobs:
+  build:
+    name: Build (${{ matrix.configuration }})
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        configuration: [Debug, Release]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Setup .NET ${{ env.DOTNET_VERSION }}
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json', '**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: Restore
+        run: dotnet restore IntegratedAccSys.sln
+
+      - name: Build
+        run: dotnet build IntegratedAccSys.sln --configuration ${{ matrix.configuration }} --no-restore
+
+      - name: Upload build artifacts
+        if: matrix.configuration == 'Release' && github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: IntegratedAccSys-Release
+          path: |
+            src/**/*.dll
+            src/**/*.exe
+            !src/**/bin/**/*.pdb
+          if-no-files-found: warn
+          retention-days: 14

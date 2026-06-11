@@ -68,5 +68,24 @@ scripts/naming-violations.json
 scripts/mapping-matrix.json
 scripts/cleanup-audit.log
 
-# Scratch / one-off debug scripts (prefixed with __)
+# Scratch / one-off debug scripts (prefixed with __ anywhere in the repo)
+__*.*
+**/__*.*
 scripts/__*.ps1
+scripts/__*.py
+scripts/__*.sql
+scripts/__*.txt
+scripts/__*.tsv
+scripts/__*.err
+*.audit.log
+*.audit.json
+*.audit.txt
+coverage/
+*.coverage
+TestResults/
+
+# Local environment overrides
+.env
+.env.local
+appsettings.Development.json
+appsettings.*.local.json
