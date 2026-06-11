@@ -1,0 +1,71 @@
+# =====================================================================
+# IntegratedAccSys — postgresql.conf snippet (Gap #2)
+# =====================================================================
+# Date        : 2026-06-10
+# Branch      : feat/gap-2-column-encryption-ssl
+# Author      : GitHub Copilot (MiniMax-M3)
+# Scope       : Settings that require a PostgreSQL service restart.
+#               Apply by appending the lines below to
+#               C:/Program Files/PostgreSQL/17/data/postgresql.conf
+#               (or equivalent on Linux) and restarting the service.
+#
+# Verified    : Tested on PostgreSQL 17.10 / Windows.
+# Rollback    : Comment out the lines and restart again.
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# 1. SSL/TLS — encrypt all client connections (MITM prevention)
+# ---------------------------------------------------------------------
+# Generate a self-signed cert in dev (or use a real CA cert in prod):
+#   openssl req -new -x509 -days 3650 -nodes -text \
+#       -out server.crt -keyout server.key -subj "/CN=localhost"
+#   cp server.crt server.key C:/Program Files/PostgreSQL/17/data/
+#   chmod 600 server.key
+ssl = on
+ssl_cert_file = 'server.crt'
+ssl_key_file  = 'server.key'
+ssl_min_protocol_version = 'TLSv1.2'
+
+# ---------------------------------------------------------------------
+# 2. shared_preload_libraries — required for pg_stat_statements & pgaudit
+# ---------------------------------------------------------------------
+# Order matters: pg_stat_statements must come before pgaudit.
+# After changing this, `RESTART` (not just reload) the service.
+shared_preload_libraries = 'pg_stat_statements'
+
+# ---------------------------------------------------------------------
+# 3. pgaudit — SOX-grade statement-level audit log
+# ---------------------------------------------------------------------
+# Uncomment ONLY after the pgaudit extension is installed at the
+# OS level. On Windows with the EDB installer, this is usually:
+#   "C:\Program Files\PostgreSQL\17\bin\psql.exe" -d postgres -c \
+#     "CREATE EXTENSION pgaudit;"  -- after the lib is on the lib path
+# If pgaudit is NOT available, leave the lines commented and rely on
+# log_statement = 'mod' (set in IntegratedAccSys_Security.sql).
+#
+# shared_preload_libraries = 'pg_stat_statements,pgaudit'
+# pgaudit.log = 'write, ddl, role, grant'
+# pgaudit.log_catalog = off
+# pgaudit.log_parameter = on
+# pgaudit.log_statement_once = off
+# pgaudit.log_relation = on
+
+# ---------------------------------------------------------------------
+# 4. Statement-level log destinations (recommendations)
+# ---------------------------------------------------------------------
+log_destination = 'csvlog,stderr'           # csvlog → easy to ingest
+logging_collector = on
+log_directory = 'pg_log'
+log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'
+log_rotation_age = '1d'
+log_rotation_size = '100MB'
+log_truncate_on_rotation = on
+
+# ---------------------------------------------------------------------
+# 5. Resource hardening for app_* roles
+# ---------------------------------------------------------------------
+# Cap idle_in_transaction_session_timeout so a hanging txn doesn't
+# hold locks forever. 30 s is a sane default for an OLTP WinForms app.
+idle_in_transaction_session_timeout = '30s'
+statement_timeout                   = '60s'   # max query duration
+lock_timeout                        = '10s'
