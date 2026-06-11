@@ -30,12 +30,12 @@ technology stack (.NET 8, Npgsql 8.0.4, ReportViewerCore.WinForms 15.1.26, Postg
 
 ## 1. Repository Topology
 
-| Component | Name | Purpose | Lifetime |
-|-----------|------|---------|:--------:|
-| **Local branch** | `zaher-main` | The **only** local working branch | Permanent |
-| **Remote** | `zaher-origin` | The **only** remote (GitHub: `nashwanzaher/IntegratedAccountsSystem`) | Permanent |
-| **Remote default branch** | `origin/main` (i.e. `zaher-origin/main`) | Trunk, always deployable | Permanent |
-| **Working submodules** | _none_ | Submodules are forbidden | n/a |
+| Component                 | Name                                     | Purpose                                                               | Lifetime  |
+| ------------------------- | ---------------------------------------- | --------------------------------------------------------------------- | :-------: |
+| **Local branch**          | `zaher-main`                             | The **only** local working branch                                     | Permanent |
+| **Remote**                | `zaher-origin`                           | The **only** remote (GitHub: `nashwanzaher/IntegratedAccountsSystem`) | Permanent |
+| **Remote default branch** | `origin/main` (i.e. `zaher-origin/main`) | Trunk, always deployable                                              | Permanent |
+| **Working submodules**    | _none_                                   | Submodules are forbidden                                              |    n/a    |
 
 ### Push/Pull defaults
 
@@ -65,18 +65,18 @@ Local:   zaher-main  ─────push/pull────▶  zaher-origin/main
 
 ## 2. Golden Rules (Non-Negotiable)
 
-| # | Rule | Why |
-|---|------|-----|
-| **G1** | **One local branch only**: `zaher-main` | Avoid stale branches and merge debt |
-| **G2** | **One remote only**: `zaher-origin` | Single source of truth, no scattered mirrors |
-| **G3** | **No submodules** | All code lives in one repo |
-| **G4** | **PL → BL → DAL only** (never skip a layer) | Architectural invariant — see [ARCHITECTURE.md](ARCHITECTURE.md) §4 |
-| **G5** | **DAL contains zero business logic** | Pure SQL/Sproc wrapper layer |
-| **G6** | **BL contains zero UI types** (`System.Windows.Forms`) | Keep UI in PL |
-| **G7** | **Database objects are SQL-first** | Views, functions, procedures, triggers live in `database/*.sql` |
-| **G8** | **Build clean**: 0 errors, 0 new warnings | `dotnet build -c Release` must pass |
-| **G9** | **Tests pass**: DbTest 46/46 minimum | `dotnet run --project tests/IntegratedAccSys.DAL.DbTest` |
-| **G10** | **All 6 audit scripts pass** before push | `scripts/audit-g*.ps1` |
+| #       | Rule                                                   | Why                                                                 |
+| ------- | ------------------------------------------------------ | ------------------------------------------------------------------- |
+| **G1**  | **One local branch only**: `zaher-main`                | Avoid stale branches and merge debt                                 |
+| **G2**  | **One remote only**: `zaher-origin`                    | Single source of truth, no scattered mirrors                        |
+| **G3**  | **No submodules**                                      | All code lives in one repo                                          |
+| **G4**  | **PL → BL → DAL only** (never skip a layer)            | Architectural invariant — see [ARCHITECTURE.md](ARCHITECTURE.md) §4 |
+| **G5**  | **DAL contains zero business logic**                   | Pure SQL/Sproc wrapper layer                                        |
+| **G6**  | **BL contains zero UI types** (`System.Windows.Forms`) | Keep UI in PL                                                       |
+| **G7**  | **Database objects are SQL-first**                     | Views, functions, procedures, triggers live in `database/*.sql`     |
+| **G8**  | **Build clean**: 0 errors, 0 new warnings              | `dotnet build -c Release` must pass                                 |
+| **G9**  | **Tests pass**: DbTest 46/46 minimum                   | `dotnet run --project tests/IntegratedAccSys.DAL.DbTest`            |
+| **G10** | **All 6 audit scripts pass** before push               | `scripts/audit-g*.ps1`                                              |
 
 ---
 
@@ -161,12 +161,12 @@ dotnet build -c Release   # last sanity build
 
 **Responsibility:** PostgreSQL access only.
 
-| File | Purpose | Touch when… |
-|------|---------|-------------|
-| `clsCN.cs` | Connection wrapper | Connection lifecycle changes |
-| `DbContext.cs` | Connection + transaction mgmt | Transaction semantics change |
-| `DbContextProvider.cs` | Thread-safe singleton | Concurrency / DI changes |
-| `DalSettings.cs` | DAL config (env vars + AppSettings) | New env var, default change |
+| File                   | Purpose                             | Touch when…                  |
+| ---------------------- | ----------------------------------- | ---------------------------- |
+| `clsCN.cs`             | Connection wrapper                  | Connection lifecycle changes |
+| `DbContext.cs`         | Connection + transaction mgmt       | Transaction semantics change |
+| `DbContextProvider.cs` | Thread-safe singleton               | Concurrency / DI changes     |
+| `DalSettings.cs`       | DAL config (env vars + AppSettings) | New env var, default change  |
 
 **DAL checklist before commit:**
 
@@ -181,18 +181,18 @@ dotnet build -c Release   # last sanity build
 
 **Responsibility:** Business rules, validation, workflows.
 
-| Sub-folder | Domain | Key class(es) |
-|------------|--------|----------------|
-| `Accounts/` | Chart of accounts | `ClsAccounts` |
-| `Bonds/`   | Bond / cheque mgmt | `ClsBonds` |
-| `Journal/` | Journal entries + posting | `ClsJournal` |
-| `Purchases/` | Supplier + purchase ops | `ClsPurchases` |
-| `Sales/`   | Customer + sales ops | `ClsSales` |
-| `Stores/`  | Inventory | `ClsInventory` |
-| `SysFormat/` | System config (branches, banks, …) | `ClsSysFormat` |
-| `Users/`   | Auth + privilege | `ClsUsers` |
-| `Security/` | Hashing, sessions, audit, privileges | `PasswordHelper`, `SessionContext`, `AuditHelper`, `PrivilegeHelper` |
-| `Constants.cs` | System-wide enums + constants | All |
+| Sub-folder     | Domain                               | Key class(es)                                                        |
+| -------------- | ------------------------------------ | -------------------------------------------------------------------- |
+| `Accounts/`    | Chart of accounts                    | `ClsAccounts`                                                        |
+| `Bonds/`       | Bond / cheque mgmt                   | `ClsBonds`                                                           |
+| `Journal/`     | Journal entries + posting            | `ClsJournal`                                                         |
+| `Purchases/`   | Supplier + purchase ops              | `ClsPurchases`                                                       |
+| `Sales/`       | Customer + sales ops                 | `ClsSales`                                                           |
+| `Stores/`      | Inventory                            | `ClsInventory`                                                       |
+| `SysFormat/`   | System config (branches, banks, …)   | `ClsSysFormat`                                                       |
+| `Users/`       | Auth + privilege                     | `ClsUsers`                                                           |
+| `Security/`    | Hashing, sessions, audit, privileges | `PasswordHelper`, `SessionContext`, `AuditHelper`, `PrivilegeHelper` |
+| `Constants.cs` | System-wide enums + constants        | All                                                                  |
 
 **BL checklist before commit:**
 
@@ -207,13 +207,13 @@ dotnet build -c Release   # last sanity build
 
 **Responsibility:** Windows Forms, RDLC reports, user interaction.
 
-| Sub-folder | Contains |
-|------------|----------|
-| `Program.cs`, `frmMainWindow.cs`, `frmLogin.cs` | App shell, MDI parent, login |
-| `Accounts/`, `Bonds/`, `Journal/`, `Purchases/`, `Sales/`, `Stores/`, `SysFormat/`, `Users/` | WinForms for each domain |
-| `Reports/` | RDLC files + `frmReportViewer` |
-| `Security/PrivilegeApplier.cs` | Applies user privileges to UI elements (hide/disable) |
-| `Properties/` | Resources, Settings |
+| Sub-folder                                                                                   | Contains                                              |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| `Program.cs`, `frmMainWindow.cs`, `frmLogin.cs`                                              | App shell, MDI parent, login                          |
+| `Accounts/`, `Bonds/`, `Journal/`, `Purchases/`, `Sales/`, `Stores/`, `SysFormat/`, `Users/` | WinForms for each domain                              |
+| `Reports/`                                                                                   | RDLC files + `frmReportViewer`                        |
+| `Security/PrivilegeApplier.cs`                                                               | Applies user privileges to UI elements (hide/disable) |
+| `Properties/`                                                                                | Resources, Settings                                   |
 
 **PL checklist before commit:**
 
@@ -248,15 +248,15 @@ findstr /S /I "System.Windows.Forms"  src\IntegratedAccSys.BL\*.cs src\Integrate
 
 ### 5.1 Live database contract
 
-| Setting | Value |
-|---------|-------|
-| Service | `postgresql-x64-17` (Windows service, Automatic) |
-| Host | `localhost:5432` |
-| Database | `IntegratedAccSys` |
-| User | `postgres` (dev only — production should use least-privilege role) |
-| Password | `656650` (dev) — supplied via `$env:PGPASSWORD` or `IAS_DB_PWD` |
-| Connection mode | `SQL` (`IAS_DB_MODE=SQL`) |
-| Object count target | 116 tables, 46 views (as of 2026-06-11) |
+| Setting             | Value                                                              |
+| ------------------- | ------------------------------------------------------------------ |
+| Service             | `postgresql-x64-17` (Windows service, Automatic)                   |
+| Host                | `localhost:5432`                                                   |
+| Database            | `IntegratedAccSys`                                                 |
+| User                | `postgres` (dev only — production should use least-privilege role) |
+| Password            | `656650` (dev) — supplied via `$env:PGPASSWORD` or `IAS_DB_PWD`    |
+| Connection mode     | `SQL` (`IAS_DB_MODE=SQL`)                                          |
+| Object count target | 116 tables, 46 views (as of 2026-06-11)                            |
 
 ### 5.2 SQL Script Hierarchy
 
@@ -326,14 +326,14 @@ scripts\inventory-live-db.ps1
 
 Set these **per shell session** (do not commit credentials):
 
-| Var | Default | Use |
-|-----|---------|-----|
-| `IAS_DB_MODE` | `SQL` | `SQL` (Npgsql) or `Windows` (SSPI) |
-| `IAS_DB_SERVER` | `localhost` | PostgreSQL host |
-| `IAS_DB_PORT` | `5432` | PostgreSQL port |
-| `IAS_DB_NAME` | `IntegratedAccSys` | Database name |
-| `IAS_DB_USER` | `postgres` | Username |
-| `IAS_DB_PWD` | `postgres` | Password |
+| Var             | Default            | Use                                |
+| --------------- | ------------------ | ---------------------------------- |
+| `IAS_DB_MODE`   | `SQL`              | `SQL` (Npgsql) or `Windows` (SSPI) |
+| `IAS_DB_SERVER` | `localhost`        | PostgreSQL host                    |
+| `IAS_DB_PORT`   | `5432`             | PostgreSQL port                    |
+| `IAS_DB_NAME`   | `IntegratedAccSys` | Database name                      |
+| `IAS_DB_USER`   | `postgres`         | Username                           |
+| `IAS_DB_PWD`    | `postgres`         | Password                           |
 
 ---
 
@@ -341,12 +341,12 @@ Set these **per shell session** (do not commit credentials):
 
 ### 6.1 Local tasks (VS Code Terminal → Run Task)
 
-| Task | Command | Use |
-|------|---------|-----|
-| `build: Release (Solution)` | `dotnet build IntegratedAccSys.sln -c Release` | Default build |
-| `build: Clean + Release` | clean + build | After dependency changes |
-| `test: Build + Run DbTest` | build + DbTest | Full smoke test |
-| `test: Run DbTest (11 workflows)` | start-db-test.bat | DbTest only (faster) |
+| Task                              | Command                                        | Use                      |
+| --------------------------------- | ---------------------------------------------- | ------------------------ |
+| `build: Release (Solution)`       | `dotnet build IntegratedAccSys.sln -c Release` | Default build            |
+| `build: Clean + Release`          | clean + build                                  | After dependency changes |
+| `test: Build + Run DbTest`        | build + DbTest                                 | Full smoke test          |
+| `test: Run DbTest (11 workflows)` | start-db-test.bat                              | DbTest only (faster)     |
 
 ### 6.2 DbTest expected output
 
@@ -360,14 +360,14 @@ Set these **per shell session** (do not commit credentials):
 
 Run **before every commit** that touches the relevant area:
 
-| Script | Checks | When to run |
-|--------|--------|-------------|
-| `audit-g2-security.ps1` | Roles, GRANTs, RLS, password hashing | Any auth/privilege change |
-| `audit-g3-monitoring.ps1` | Event triggers, monitoring views | Any monitoring/metrics change |
-| `audit-g4-constraints.ps1` | CHECK, UNIQUE, EXCLUDE constraints | Any constraint change |
-| `audit-g5-indexes.ps1` | Composite + partial indexes | Any index change |
-| `audit-g7-materialized-views.ps1` | MV presence, unique idx, REFRESH, counts | Any MV change |
-| `audit-g10-approval-workflow.ps1` | Signatures, fns, triggers, view, smoke test | Any approval change |
+| Script                            | Checks                                      | When to run                   |
+| --------------------------------- | ------------------------------------------- | ----------------------------- |
+| `audit-g2-security.ps1`           | Roles, GRANTs, RLS, password hashing        | Any auth/privilege change     |
+| `audit-g3-monitoring.ps1`         | Event triggers, monitoring views            | Any monitoring/metrics change |
+| `audit-g4-constraints.ps1`        | CHECK, UNIQUE, EXCLUDE constraints          | Any constraint change         |
+| `audit-g5-indexes.ps1`            | Composite + partial indexes                 | Any index change              |
+| `audit-g7-materialized-views.ps1` | MV presence, unique idx, REFRESH, counts    | Any MV change                 |
+| `audit-g10-approval-workflow.ps1` | Signatures, fns, triggers, view, smoke test | Any approval change           |
 
 ### 6.4 Static checks (always-on pre-commit)
 
@@ -406,16 +406,16 @@ If a temporary spike is required, use a **detached HEAD** or a throwaway worktre
 <footer (optional)>
 ```
 
-| Type | Use for |
-|------|---------|
-| `feat` | New user-visible feature (form, report, workflow) |
-| `fix` | Bug fix |
-| `refactor` | Code change with no behaviour change |
-| `perf` | Performance improvement |
-| `docs` | Documentation only |
-| `test` | Add or fix tests |
-| `chore` | Build, tooling, dependency updates |
-| `db` | Database schema/logic changes |
+| Type       | Use for                                           |
+| ---------- | ------------------------------------------------- |
+| `feat`     | New user-visible feature (form, report, workflow) |
+| `fix`      | Bug fix                                           |
+| `refactor` | Code change with no behaviour change              |
+| `perf`     | Performance improvement                           |
+| `docs`     | Documentation only                                |
+| `test`     | Add or fix tests                                  |
+| `chore`    | Build, tooling, dependency updates                |
+| `db`       | Database schema/logic changes                     |
 
 **Scope** is the layer: `pl`, `bl`, `dal`, `db`, `audit`, `docs`, `repo`, `agent`.
 
@@ -466,11 +466,11 @@ git push
 
 **Semantic Versioning:** `MAJOR.MINOR.PATCH`
 
-| Component | When to bump |
-|-----------|--------------|
+| Component | When to bump                                              |
+| --------- | --------------------------------------------------------- |
 | **MAJOR** | Breaking schema change, breaking API change, .NET upgrade |
-| **MINOR** | New feature, new DB object, new audit script |
-| **PATCH** | Bug fix, doc fix, non-breaking tweak |
+| **MINOR** | New feature, new DB object, new audit script              |
+| **PATCH** | Bug fix, doc fix, non-breaking tweak                      |
 
 ### 8.2 Tag & release
 
@@ -583,28 +583,28 @@ git reset --hard HEAD@{<index>}         # jump there
 
 ### 10.1 Doc locations
 
-| Path | Content | Owner |
-|------|---------|-------|
-| `README.md` | Top-level: structure, quick start, stack | Whoever changes public API |
-| `docs/ARCHITECTURE.md` | Architecture validation report | After any architectural change |
-| `docs/WORKFLOW.md` | **This file** | After any workflow change |
-| `docs/AUDIT_REPORT.md` | Audit results | After each audit run |
-| `docs/CHANGELOG.md` | Version history | Every release |
-| `docs/audits/GAP_*_REPORT.md` | Per-gap deep dives | After closing a gap |
-| `database/README.md` | DB setup guide | After DB script changes |
-| `PRODUCTION_READINESS_REPORT.md` | Production-readiness evidence | Every release |
-| `.agent.md` | Agent-readable project status | After every meaningful change |
+| Path                             | Content                                  | Owner                          |
+| -------------------------------- | ---------------------------------------- | ------------------------------ |
+| `README.md`                      | Top-level: structure, quick start, stack | Whoever changes public API     |
+| `docs/ARCHITECTURE.md`           | Architecture validation report           | After any architectural change |
+| `docs/WORKFLOW.md`               | **This file**                            | After any workflow change      |
+| `docs/AUDIT_REPORT.md`           | Audit results                            | After each audit run           |
+| `docs/CHANGELOG.md`              | Version history                          | Every release                  |
+| `docs/audits/GAP_*_REPORT.md`    | Per-gap deep dives                       | After closing a gap            |
+| `database/README.md`             | DB setup guide                           | After DB script changes        |
+| `PRODUCTION_READINESS_REPORT.md` | Production-readiness evidence            | Every release                  |
+| `.agent.md`                      | Agent-readable project status            | After every meaningful change  |
 
 ### 10.2 Update triggers
 
-| Doc | Update when… |
-|-----|--------------|
-| `README.md` | New project, new layer, new quick-start step |
-| `docs/ARCHITECTURE.md` | Layer split, new dependency, violation found |
-| `docs/WORKFLOW.md` | Workflow change (this doc is itself versioned) |
-| `docs/CHANGELOG.md` | Every release tag |
-| `PRODUCTION_READINESS_REPORT.md` | Every release, every gap closure |
-| `.agent.md` | After every meaningful change (agent reads this first) |
+| Doc                              | Update when…                                           |
+| -------------------------------- | ------------------------------------------------------ |
+| `README.md`                      | New project, new layer, new quick-start step           |
+| `docs/ARCHITECTURE.md`           | Layer split, new dependency, violation found           |
+| `docs/WORKFLOW.md`               | Workflow change (this doc is itself versioned)         |
+| `docs/CHANGELOG.md`              | Every release tag                                      |
+| `PRODUCTION_READINESS_REPORT.md` | Every release, every gap closure                       |
+| `.agent.md`                      | After every meaningful change (agent reads this first) |
 
 ### 10.3 The `.agent.md` rule
 
@@ -624,34 +624,34 @@ git commit -m "docs(agent): update project status, DB inventory, and gap roadmap
 
 ### 11.1 Branches & remotes
 
-| Entity | Pattern | Example |
-|--------|---------|---------|
-| Local branch | `zaher-*` | `zaher-main` |
-| Remote | `zaher-*` | `zaher-origin` |
-| Tags | `vMAJOR.MINOR.PATCH` | `v1.4.2` |
+| Entity       | Pattern              | Example        |
+| ------------ | -------------------- | -------------- |
+| Local branch | `zaher-*`            | `zaher-main`   |
+| Remote       | `zaher-*`            | `zaher-origin` |
+| Tags         | `vMAJOR.MINOR.PATCH` | `v1.4.2`       |
 
 ### 11.2 Files
 
-| Layer | File pattern | Example |
-|-------|--------------|---------|
-| DAL classes | `cls<Name>.cs` or `<Name>.cs` | `clsCN.cs`, `DbContext.cs` |
-| BL entities  | `Cls<Name>.cs` (capital `C`) | `ClsAccounts.cs` |
-| PL forms | `frm<Name>.cs` | `frmMainWindow.cs` |
-| PL reports | `<name>.rdlc` | `ChartOfAccounts.rdlc` |
-| SQL scripts | `IntegratedAccSys_<Topic>.sql` | `IntegratedAccSys_PostgreSQL.sql` |
-| Audit scripts | `audit-g<N>-<topic>.ps1` | `audit-g10-approval-workflow.ps1` |
-| Docs | `<TOPIC>.md` (kebab) | `ARCHITECTURE.md`, `WORKFLOW.md` |
+| Layer         | File pattern                   | Example                           |
+| ------------- | ------------------------------ | --------------------------------- |
+| DAL classes   | `cls<Name>.cs` or `<Name>.cs`  | `clsCN.cs`, `DbContext.cs`        |
+| BL entities   | `Cls<Name>.cs` (capital `C`)   | `ClsAccounts.cs`                  |
+| PL forms      | `frm<Name>.cs`                 | `frmMainWindow.cs`                |
+| PL reports    | `<name>.rdlc`                  | `ChartOfAccounts.rdlc`            |
+| SQL scripts   | `IntegratedAccSys_<Topic>.sql` | `IntegratedAccSys_PostgreSQL.sql` |
+| Audit scripts | `audit-g<N>-<topic>.ps1`       | `audit-g10-approval-workflow.ps1` |
+| Docs          | `<TOPIC>.md` (kebab)           | `ARCHITECTURE.md`, `WORKFLOW.md`  |
 
 ### 11.3 Database
 
-| Object | Convention | Example |
-|--------|------------|---------|
-| Tables | `tbl<Name>` | `tblUsers`, `tblJournalHeader` |
-| Views | `vw_<snake_case>` | `vw_journalbody`, `vw_dimensions_summary` |
-| Functions | `get<Name>` / `add<Name>` / `update<Name>` / `delete<Name>` / `validate<Name>` | `getUserForLogin`, `addDepartment` |
-| Procedures | `sp<Name>` | `spPostJournal` |
-| Triggers | `trg_<table>_<event>` | `trg_journal_after_post` |
-| Indexes | `ix_<table>_<cols>` | `ix_users_isactive` |
+| Object     | Convention                                                                     | Example                                   |
+| ---------- | ------------------------------------------------------------------------------ | ----------------------------------------- |
+| Tables     | `tbl<Name>`                                                                    | `tblUsers`, `tblJournalHeader`            |
+| Views      | `vw_<snake_case>`                                                              | `vw_journalbody`, `vw_dimensions_summary` |
+| Functions  | `get<Name>` / `add<Name>` / `update<Name>` / `delete<Name>` / `validate<Name>` | `getUserForLogin`, `addDepartment`        |
+| Procedures | `sp<Name>`                                                                     | `spPostJournal`                           |
+| Triggers   | `trg_<table>_<event>`                                                          | `trg_journal_after_post`                  |
+| Indexes    | `ix_<table>_<cols>`                                                            | `ix_users_isactive`                       |
 
 ---
 
@@ -659,26 +659,26 @@ git commit -m "docs(agent): update project status, DB inventory, and gap roadmap
 
 ### 12.1 PowerShell aliases (cheat sheet)
 
-| PowerShell | Git equivalent |
-|------------|----------------|
-| `git status -sb` | compact status |
-| `git log --oneline --graph -20` | visual log |
-| `git diff --stat` | changed-line summary |
-| `git rev-parse --abbrev-ref HEAD` | current branch |
-| `git remote -v` | remotes + URLs |
-| `git branch -vv` | local branches + tracking |
+| PowerShell                        | Git equivalent            |
+| --------------------------------- | ------------------------- |
+| `git status -sb`                  | compact status            |
+| `git log --oneline --graph -20`   | visual log                |
+| `git diff --stat`                 | changed-line summary      |
+| `git rev-parse --abbrev-ref HEAD` | current branch            |
+| `git remote -v`                   | remotes + URLs            |
+| `git branch -vv`                  | local branches + tracking |
 
 ### 12.2 Common error → fix
 
-| Symptom | Fix |
-|---------|-----|
-| `fatal: no upstream configured` | `git branch --set-upstream-to=zaher-origin/main zaher-main` |
-| `non-fast-forward` on push | **STOP.** Investigate before force-pushing. See §9.3. |
-| `dotnet build` → `error CS0246` | `dotnet restore` then rebuild |
-| `DbTest` → `connection refused` | Start PostgreSQL service: `Start-Service postgresql-x64-17` |
-| `DbTest` → `password authentication failed` | `$env:PGPASSWORD='656650'` or set `IAS_DB_PWD` |
+| Symptom                                           | Fix                                                                                      |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `fatal: no upstream configured`                   | `git branch --set-upstream-to=zaher-origin/main zaher-main`                              |
+| `non-fast-forward` on push                        | **STOP.** Investigate before force-pushing. See §9.3.                                    |
+| `dotnet build` → `error CS0246`                   | `dotnet restore` then rebuild                                                            |
+| `DbTest` → `connection refused`                   | Start PostgreSQL service: `Start-Service postgresql-x64-17`                              |
+| `DbTest` → `password authentication failed`       | `$env:PGPASSWORD='656650'` or set `IAS_DB_PWD`                                           |
 | `psql` → single-quote escape errors in PowerShell | wrap query in double quotes for psql, e.g. `psql -c "SELECT * FROM tbl WHERE col = 'x'"` |
-| `findstr` returns matches in `bin/obj` | always pass `src\...` or `tests\...` to scope |
+| `findstr` returns matches in `bin/obj`            | always pass `src\...` or `tests\...` to scope                                            |
 
 ### 12.3 Quick verification (run after every session)
 
@@ -717,38 +717,38 @@ Build succeeded.  0 Error(s)
 
 These tasks are defined in `.vscode/tasks.json` and are the recommended entry points.
 
-| Task | Use |
-|------|-----|
-| `build: Release (Solution)` | Default build (default build group) |
-| `build: Clean + Release` | Clean + build (after deps change) |
-| `test: Build + Run DbTest` | Full smoke test (build + DbTest) |
-| `test: Run DbTest (11 workflows)` | DbTest only (faster) |
-| `psql: Open interactive session` | Open psql with credentials pre-set |
-| `psql: Database version + counts` | Quick DB health |
-| `psql: List all tables` | `\dt` |
-| `psql: List all functions` | `\df` |
-| `psql: List all procedures` | `\df+` |
-| `psql: List all views` | `\dv` |
-| `psql: Show getUserForLogin function` | `\sf getUserForLogin` |
-| `psql: Describe tblUsers table` | `\d tblUsers` |
-| `psql: Run query from clipboard` | Run whatever is in the clipboard |
-| `audit: Run naming conventions audit` | Naming audit |
-| `audit: Run build-mapping-matrix` | BL → DB mapping matrix |
-| `audit: Run live DB inventory` | Live inventory script |
+| Task                                  | Use                                 |
+| ------------------------------------- | ----------------------------------- |
+| `build: Release (Solution)`           | Default build (default build group) |
+| `build: Clean + Release`              | Clean + build (after deps change)   |
+| `test: Build + Run DbTest`            | Full smoke test (build + DbTest)    |
+| `test: Run DbTest (11 workflows)`     | DbTest only (faster)                |
+| `psql: Open interactive session`      | Open psql with credentials pre-set  |
+| `psql: Database version + counts`     | Quick DB health                     |
+| `psql: List all tables`               | `\dt`                               |
+| `psql: List all functions`            | `\df`                               |
+| `psql: List all procedures`           | `\df+`                              |
+| `psql: List all views`                | `\dv`                               |
+| `psql: Show getUserForLogin function` | `\sf getUserForLogin`               |
+| `psql: Describe tblUsers table`       | `\d tblUsers`                       |
+| `psql: Run query from clipboard`      | Run whatever is in the clipboard    |
+| `audit: Run naming conventions audit` | Naming audit                        |
+| `audit: Run build-mapping-matrix`     | BL → DB mapping matrix              |
+| `audit: Run live DB inventory`        | Live inventory script               |
 
 ---
 
 ## Appendix B — Where to find what
 
-| Question | Look in |
-|----------|---------|
-| "How do I add a new column to `tblUsers`?" | `database/IntegratedAccSys_PostgreSQL.sql` (schema) → re-apply → audit-g2 |
-| "How do I add a new BL method?" | `src/IntegratedAccSys.BL/<Domain>/ClsXxx.cs` |
-| "How do I add a new WinForm?" | `src/IntegratedAccSys.PL/<Domain>/frmXxx.cs` + `.resx` + `PrivilegeApplier` |
-| "How do I add a new audit?" | `scripts/audit-g<N>-<topic>.ps1` + add a task in `.vscode/tasks.json` |
-| "How do I add a new migration?" | Create a new `database/IntegratedAccSys_<Topic>.sql`, apply, commit |
-| "What is the current DB state?" | `scripts\inventory-live-db.ps1` |
-| "What gaps are still open?" | `PRODUCTION_READINESS_REPORT.md` and `.agent.md` |
+| Question                                   | Look in                                                                     |
+| ------------------------------------------ | --------------------------------------------------------------------------- |
+| "How do I add a new column to `tblUsers`?" | `database/IntegratedAccSys_PostgreSQL.sql` (schema) → re-apply → audit-g2   |
+| "How do I add a new BL method?"            | `src/IntegratedAccSys.BL/<Domain>/ClsXxx.cs`                                |
+| "How do I add a new WinForm?"              | `src/IntegratedAccSys.PL/<Domain>/frmXxx.cs` + `.resx` + `PrivilegeApplier` |
+| "How do I add a new audit?"                | `scripts/audit-g<N>-<topic>.ps1` + add a task in `.vscode/tasks.json`       |
+| "How do I add a new migration?"            | Create a new `database/IntegratedAccSys_<Topic>.sql`, apply, commit         |
+| "What is the current DB state?"            | `scripts\inventory-live-db.ps1`                                             |
+| "What gaps are still open?"                | `PRODUCTION_READINESS_REPORT.md` and `.agent.md`                            |
 
 ---
 
