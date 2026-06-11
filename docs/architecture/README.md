@@ -139,11 +139,11 @@ psql -h localhost -p 5432 -U postgres -d IntegratedAccSys -f Database/Integrated
 
 | File | Type | Purpose |
 |---|---|---|
-| `Architecture.md` | Markdown | Authoritative 3-tier architecture doc (PL/BL/DAL/DB sections) |
-| `IntegratedAccountsSystem_Architecture_Documentation.pdf` | PDF | PDF export of `Architecture.md` |
+| `IntegratedAccountsSystem_Architecture_Documentation.pdf` | PDF | PDF export of the canonical architecture doc at [`../ARCHITECTURE.md`](../ARCHITECTURE.md) |
 | `CMP_Comprehensive_Project_Map.pdf` | PDF | Comprehensive project map (SQL Server era — historical) |
 | `CMP_Comprehensive_Project_Map_Report.pdf` | PDF | Duplicate export of project map |
 
+> The authoritative 3-tier architecture doc lives at [`../ARCHITECTURE.md`](../ARCHITECTURE.md).
 > The two `CMP_Comprehensive_Project_Map*.pdf` files are byte-near-identical (49531 vs 49532 bytes). One is kept for archival, the other may be deleted in a future pass.
 
 ---

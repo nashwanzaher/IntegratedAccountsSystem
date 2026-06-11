@@ -219,11 +219,12 @@ Located in `Reports/`:
 
 ### Architecture (organized by PL / BL / DAL tiers)
 
-See **[`architecture/README.md`](architecture/README.md)** — system architecture with tier-by-tier breakdown.
+See **[`ARCHITECTURE.md`](ARCHITECTURE.md)** — the authoritative 3-tier architecture validation report with evidence.
+
+Supplementary PDFs in [`architecture/`](architecture/):
 
 | File | Description |
 |---|---|
-| `architecture/Architecture.md` | Authoritative 3-tier architecture (PL/BL/DAL/DB) |
 | `architecture/README.md` | Tier map + per-layer file inventory |
 | `architecture/*.pdf` | PDF exports of the architecture doc |
 
